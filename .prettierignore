@@ -1,0 +1,9 @@
+node_modules
+dist
+coverage
+src/generated
+prisma/migrations
+yarn.lock
+package-lock.json
+.husky/_
+nestjs-bootstrap
