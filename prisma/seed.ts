@@ -247,7 +247,7 @@ async function seed(): Promise<void> {
           categoryId,
           name: p.name,
           slug: p.slug,
-          description: `${p.name} — thiết kế bởi EQL Apparel.`,
+          description: `${p.name} — thiết kế bởi OXI Apparel.`,
           thumbnail,
           status: ProductStatus.ACTIVE,
         },
