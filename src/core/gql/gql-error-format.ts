@@ -1,6 +1,6 @@
 import { randomUUID } from 'node:crypto';
 
-import { Logger } from '@nestjs/common';
+import { HttpException, Logger } from '@nestjs/common';
 import type { GraphQLFormattedError } from 'graphql';
 
 interface ApolloErrorLike {
@@ -14,6 +14,47 @@ interface AppErrorPayload {
   code?: string;
   i18nKey?: string;
   params?: Record<string, unknown>;
+}
+
+/**
+ * Resolves the structured payload of an AppException. Apollo may pass the
+ * original error directly or wrap it in a GraphQLError, while Nest stores the
+ * HTTP response under `extensions.originalError` — support every shape.
+ */
+function resolveAppPayload(
+  error: unknown,
+  extensions: Record<string, unknown>,
+): AppErrorPayload | null {
+  const gqlError = (error ?? {}) as ApolloErrorLike;
+  const candidates: unknown[] = [
+    extensions.originalError,
+    gqlError.originalError,
+    error,
+  ];
+
+  for (const candidate of candidates) {
+    if (candidate instanceof HttpException) {
+      const response = candidate.getResponse();
+
+      if (response && typeof response === 'object') {
+        const payload = response as AppErrorPayload;
+
+        if (typeof payload.code === 'string') {
+          return payload;
+        }
+      }
+    }
+
+    if (candidate && typeof candidate === 'object') {
+      const payload = candidate as AppErrorPayload;
+
+      if (typeof payload.code === 'string') {
+        return payload;
+      }
+    }
+  }
+
+  return null;
 }
 
 const CLIENT_CODES = new Set([
@@ -30,11 +71,11 @@ export function formatGraphQLError(
 ): GraphQLFormattedError {
   const gqlError = (error ?? {}) as ApolloErrorLike;
   const extensions = gqlError.extensions ?? {};
-  const payload = (extensions.originalError ?? {}) as AppErrorPayload;
+  const payload = resolveAppPayload(error, extensions);
 
-  if (typeof payload.code === 'string') {
+  if (payload) {
     return {
-      message: payload.i18nKey ?? gqlError.message ?? payload.code,
+      message: payload.i18nKey ?? gqlError.message ?? payload.code ?? 'ERROR',
       path: formatted.path,
       locations: formatted.locations,
       extensions: {

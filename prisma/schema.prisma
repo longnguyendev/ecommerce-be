@@ -7,3 +7,274 @@ generator client {
 datasource db {
   provider = "postgresql"
 }
+
+
+
+// ───────── Catalog ─────────
+
+model Category {
+  id        String     @id @default(uuid())
+  name      String
+  slug      String     @unique
+  parentId  String?
+  parent    Category?  @relation("CategoryTree", fields: [parentId], references: [id])
+  children  Category[] @relation("CategoryTree")
+  products  Product[]
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+
+  @@index([parentId])
+}
+
+enum ProductStatus {
+  DRAFT
+  ACTIVE
+  ARCHIVED
+}
+
+model Product {
+  id          String          @id @default(uuid())
+  categoryId  String
+  category    Category        @relation(fields: [categoryId], references: [id])
+  name        String
+  slug        String          @unique
+  description String?
+  thumbnail   String?
+  status      ProductStatus   @default(DRAFT)
+  variants    ProductVariant[]
+  images      ProductImage[]
+  createdAt   DateTime        @default(now())
+  updatedAt   DateTime        @updatedAt
+  deletedAt   DateTime?
+
+  @@index([categoryId])
+}
+
+model ProductImage {
+  id        String          @id @default(uuid())
+  productId String
+  product   Product         @relation(fields: [productId], references: [id], onDelete: Cascade)
+  variantId String? // null = ảnh chung của sản phẩm; có giá trị = ảnh riêng của biến thể
+  variant   ProductVariant? @relation(fields: [variantId], references: [id], onDelete: SetNull)
+  url       String
+  alt       String?
+  sortOrder Int             @default(0)
+  isPrimary Boolean         @default(false) // ảnh đại diện (đồng bộ vào Product.thumbnail)
+  createdAt DateTime        @default(now())
+
+  @@index([productId, sortOrder])
+  @@index([variantId])
+}
+
+model Attribute {
+  id     String           @id @default(uuid())
+  name   String           @unique // Màu sắc, Size, Chất liệu
+  values AttributeValue[]
+  variantValues VariantAttributeValue[]
+}
+
+model AttributeValue {
+  id          String    @id @default(uuid())
+  attributeId String
+  attribute   Attribute @relation(fields: [attributeId], references: [id])
+  value       String // Đỏ, L, Cotton 100%
+  variantLinks VariantAttributeValue[]
+
+  @@unique([attributeId, value])
+  @@unique([id, attributeId]) // phục vụ composite FK bên dưới
+}
+
+model ProductVariant {
+  id             String   @id @default(uuid())
+  productId      String
+  product        Product  @relation(fields: [productId], references: [id])
+  sku            String   @unique
+  price          Int // VND, giá bán
+  costPrice      Int      @default(0) // VND, giá vốn
+  compareAtPrice Int? // VND, giá gốc (gạch ngang)
+  stockQuantity  Int      @default(0) // thêm CHECK (>= 0) trong migration SQL
+  isActive       Boolean  @default(true)
+  images         ProductImage[]
+  attributes     VariantAttributeValue[]
+  orderItems     OrderItem[]
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+  deletedAt      DateTime?
+
+  @@index([productId])
+}
+
+// Mỗi biến thể chỉ có tối đa 1 giá trị cho mỗi attribute
+model VariantAttributeValue {
+  variantId        String
+  attributeId      String
+  attributeValueId String
+  variant          ProductVariant @relation(fields: [variantId], references: [id], onDelete: Cascade)
+  attribute        Attribute      @relation(fields: [attributeId], references: [id])
+  attributeValue   AttributeValue @relation(fields: [attributeValueId, attributeId], references: [id, attributeId])
+
+  @@id([variantId, attributeId])
+  @@index([attributeValueId])
+}
+
+// ───────── Customers ─────────
+
+model Customer {
+  id           String            @id @default(uuid())
+  fullName     String
+  email        String?           @unique
+  phone        String?           @unique
+  passwordHash String? // null nếu chưa có tài khoản
+  addresses    CustomerAddress[]
+  orders       Order[]
+  createdAt    DateTime          @default(now())
+  updatedAt    DateTime          @updatedAt
+}
+
+model CustomerAddress {
+  id          String   @id @default(uuid())
+  customerId  String
+  customer    Customer @relation(fields: [customerId], references: [id], onDelete: Cascade)
+  fullName    String
+  phone       String
+  address     String // số nhà, tên đường
+  ward        String
+  district    String? // tùy chọn (địa giới hành chính đã thay đổi)
+  province    String
+  isDefault   Boolean  @default(false)
+
+  @@index([customerId])
+}
+
+// ───────── Coupons ─────────
+
+enum DiscountType {
+  PERCENT
+  FIXED
+}
+
+model Coupon {
+  id                String       @id @default(uuid())
+  code              String       @unique
+  discountType      DiscountType
+  discountValue     Int // % hoặc VND tùy discountType
+  minOrderValue     Int          @default(0)
+  maxDiscountAmount Int? // trần giảm khi PERCENT
+  usageLimit        Int?
+  usedCount         Int          @default(0)
+  startDate         DateTime?
+  endDate           DateTime?
+  isActive          Boolean      @default(true)
+  orders            Order[]
+}
+
+// ───────── Orders ─────────
+
+enum OrderStatus {
+  PENDING // chờ xác nhận / chờ thanh toán
+  CONFIRMED
+  SHIPPING
+  COMPLETED
+  CANCELLED
+}
+
+enum PaymentStatus {
+  UNPAID
+  PAID
+  FAILED
+  REFUNDED
+}
+
+model Order {
+  id         String  @id @default(uuid())
+  orderCode  String  @unique // mã hiển thị / tra cứu, vd: DH240601001
+  customerId String? // null = khách vãng lai
+  customer   Customer? @relation(fields: [customerId], references: [id])
+
+  // Snapshot liên hệ + giao hàng (bắt buộc cho cả khách vãng lai)
+  contactEmail     String?
+  contactPhone     String
+  shippingName     String
+  shippingPhone    String
+  shippingAddress  String
+  shippingWard     String
+  shippingDistrict String?
+  shippingProvince String
+  note             String?
+
+  // Tiền (VND). finalAmount = totalAmount - discountAmount + shippingFee
+  totalAmount    Int
+  discountAmount Int @default(0)
+  shippingFee    Int @default(0)
+  finalAmount    Int
+
+  couponId   String?
+  coupon     Coupon? @relation(fields: [couponId], references: [id])
+  couponCode String? // snapshot
+
+  status        OrderStatus   @default(PENDING)
+  paymentStatus PaymentStatus @default(UNPAID)
+  paymentMethod PaymentMethod
+
+  items     OrderItem[]
+  payments  Payment[]
+  createdAt DateTime    @default(now())
+  updatedAt DateTime    @updatedAt
+
+  @@index([customerId, createdAt])
+  @@index([status])
+  @@index([contactPhone])
+}
+
+model OrderItem {
+  id          String         @id @default(uuid())
+  orderId     String
+  order       Order          @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  variantId   String?
+  variant     ProductVariant? @relation(fields: [variantId], references: [id], onDelete: SetNull)
+
+  // Snapshot tại thời điểm mua
+  productName String
+  variantName String? // vd: "Đỏ / L"
+  sku         String
+  image       String?
+  quantity    Int
+  unitPrice   Int
+  unitCost    Int
+  lineTotal   Int // quantity * unitPrice
+
+  @@index([orderId])
+  @@index([variantId])
+}
+
+// ───────── Payments ─────────
+
+enum PaymentMethod {
+  COD
+  BANK_TRANSFER
+  GATEWAY
+}
+
+enum PaymentTxStatus {
+  PENDING
+  SUCCESS
+  FAILED
+  REFUNDED
+}
+
+model Payment {
+  id            String          @id @default(uuid())
+  orderId       String
+  order         Order           @relation(fields: [orderId], references: [id])
+  provider      String // vnpay, momo, payos, zalopay...
+  transactionId String? // mã giao dịch phía cổng
+  amount        Int // VND
+  status        PaymentTxStatus @default(PENDING)
+  rawResponse   Json? // payload callback/IPN để đối soát
+  paidAt        DateTime?
+  createdAt     DateTime        @default(now())
+  updatedAt     DateTime        @updatedAt
+
+  @@unique([provider, transactionId]) // chống xử lý IPN trùng
+  @@index([orderId])
+}

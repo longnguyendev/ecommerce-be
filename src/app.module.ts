@@ -14,6 +14,17 @@ import { HealthResolver } from './common/health/health.resolver';
 import { PrismaErrorInterceptor } from './common/interceptors/prisma-error.interceptor';
 import { CoreModule } from './core/core.module';
 import { GqlThrottlerGuard } from './guards/gql-throttler.guard';
+import { AttributeModule } from './modules/attribute/attribute.module';
+import { AuthModule } from './modules/auth/auth.module';
+import { CategoryModule } from './modules/category/category.module';
+import { CouponModule } from './modules/coupon/coupon.module';
+import { CustomerModule } from './modules/customer/customer.module';
+import { OrderModule } from './modules/order/order.module';
+import { PaymentModule } from './modules/payment/payment.module';
+import { ProductImageModule } from './modules/product-image/product-image.module';
+import { ProductVariantModule } from './modules/product-variant/product-variant.module';
+import { ProductModule } from './modules/product/product.module';
+import { UploadModule } from './modules/upload/upload.module';
 import { PrismaModule } from './prisma/prisma.module';
 
 @Module({
@@ -32,6 +43,17 @@ import { PrismaModule } from './prisma/prisma.module';
     ThrottlerModule.forRoot([{ ttl: FIVE_MINUTES, limit: 50 }]),
     CoreModule,
     PrismaModule,
+    AuthModule,
+    UploadModule,
+    CategoryModule,
+    ProductModule,
+    ProductVariantModule,
+    ProductImageModule,
+    AttributeModule,
+    CustomerModule,
+    CouponModule,
+    OrderModule,
+    PaymentModule,
   ],
   controllers: [HealthController],
   providers: [

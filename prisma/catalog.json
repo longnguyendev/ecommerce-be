@@ -1,0 +1,3649 @@
+{
+  "source": "https://eql-apparel.com/products",
+  "scrapedAt": "2026-10-31T16:47:38.993Z",
+  "brand": "EQL Apparel",
+  "hero": {
+    "h1": "Đồ thể thao chuẩn form, đậm chất thời trang.",
+    "sub": "Thiết kế cho sân đấu, phòng tập và dạo phố — theo cách bạn vận động."
+  },
+  "collections": [
+    {
+      "label": "Tất cả",
+      "href": "/products",
+      "image": "/images/collections/tat-ca.webp"
+    },
+    {
+      "label": "Mới",
+      "href": "/products?tag=new",
+      "image": "/images/collections/moi.webp"
+    },
+    {
+      "label": "Sân",
+      "href": "/products?activity=court",
+      "image": "/images/collections/san.webp"
+    },
+    {
+      "label": "Studio",
+      "href": "/products?activity=studio",
+      "image": "/images/collections/studio.webp"
+    },
+    {
+      "label": "Tập",
+      "href": "/products?activity=train",
+      "image": "/images/collections/tap.webp"
+    },
+    {
+      "label": "Nghỉ ngơi",
+      "href": "/products?activity=lounge",
+      "image": "/images/collections/nghi-ngoi.webp"
+    },
+    {
+      "label": "Chạy",
+      "href": "/products?activity=run",
+      "image": "/images/collections/chay.webp"
+    },
+    {
+      "label": "Phụ kiện",
+      "href": "/products?tag=accessories",
+      "image": "/images/collections/phu-kien.jpg"
+    }
+  ],
+  "filters": {
+    "sizes": ["S", "M", "L", "XL"],
+    "colors": [
+      "Beige",
+      "Black",
+      "Blue",
+      "Brown",
+      "Green",
+      "Grey",
+      "Orange",
+      "Pink",
+      "Purple",
+      "Red",
+      "Tan",
+      "White",
+      "Yellow"
+    ]
+  },
+  "products": [
+    {
+      "slug": "sculpt-black-den-bra",
+      "name": "Sculpt - Black (Đen) - Bra",
+      "category": "Bra",
+      "price": 500000,
+      "compareAt": null,
+      "rating": 4.8,
+      "reviews": 4,
+      "images": [
+        "/images/products/sculpt-black-den-bra-1.jpg",
+        "/images/products/sculpt-black-den-bra-2.webp",
+        "/images/products/sculpt-black-den-bra-3.webp"
+      ],
+      "colors": ["#000000", "#0A6080"],
+      "badge": null
+    },
+    {
+      "slug": "sculpt-black-den-short-sleeve-ao-coc-tay",
+      "name": "Sculpt - Black (Đen) - Áo Cộc Tay",
+      "category": "Áo Cộc Tay",
+      "price": 500000,
+      "compareAt": null,
+      "rating": 4.3,
+      "reviews": 3,
+      "images": [
+        "/images/products/sculpt-black-den-short-sleeve-ao-coc-tay-1.jpg",
+        "/images/products/sculpt-black-den-short-sleeve-ao-coc-tay-2.webp",
+        "/images/products/sculpt-black-den-short-sleeve-ao-coc-tay-3.webp"
+      ],
+      "colors": ["#000000", "#0A6080"],
+      "badge": null
+    },
+    {
+      "slug": "sculpt-black-den-standard-leggings-thuong",
+      "name": "Sculpt - Black (Đen) - Standard Leggings Thường",
+      "category": "Standard Leggings Thường",
+      "price": 650000,
+      "compareAt": null,
+      "rating": 4.8,
+      "reviews": 4,
+      "images": [
+        "/images/products/sculpt-black-den-standard-leggings-thuong-1.jpg",
+        "/images/products/sculpt-black-den-standard-leggings-thuong-2.webp",
+        "/images/products/sculpt-black-den-standard-leggings-thuong-3.webp"
+      ],
+      "colors": ["#000000", "#0A6080"],
+      "badge": null
+    },
+    {
+      "slug": "sculpt-black-den-flare-leggings-loe",
+      "name": "Sculpt - Black (Đen) - Flare Leggings Loe",
+      "category": "Flare Leggings Loe",
+      "price": 650000,
+      "compareAt": null,
+      "rating": 4.7,
+      "reviews": 3,
+      "images": [
+        "/images/products/sculpt-black-den-flare-leggings-loe-1.jpg",
+        "/images/products/sculpt-black-den-flare-leggings-loe-2.webp",
+        "/images/products/sculpt-black-den-flare-leggings-loe-3.webp"
+      ],
+      "colors": ["#000000", "#0A6080"],
+      "badge": null
+    },
+    {
+      "slug": "sculpt-azure-xanh-thanh-thien-bra",
+      "name": "Sculpt - Azure (Xanh Thanh Thiên) - Bra",
+      "category": "Bra",
+      "price": 500000,
+      "compareAt": null,
+      "rating": 4.7,
+      "reviews": 3,
+      "images": [
+        "/images/products/sculpt-azure-xanh-thanh-thien-bra-1.jpg",
+        "/images/products/sculpt-azure-xanh-thanh-thien-bra-2.webp",
+        "/images/products/sculpt-azure-xanh-thanh-thien-bra-3.webp"
+      ],
+      "colors": ["#0A6080", "#000000"],
+      "badge": null
+    },
+    {
+      "slug": "sculpt-azure-xanh-thanh-thien-short-sleeve-ao-coc-tay",
+      "name": "Sculpt - Azure (Xanh Thanh Thiên) - Áo Cộc Tay",
+      "category": "Áo Cộc Tay",
+      "price": 500000,
+      "compareAt": null,
+      "rating": 4.7,
+      "reviews": 3,
+      "images": [
+        "/images/products/sculpt-azure-xanh-thanh-thien-short-sleeve-ao-coc-tay-1.webp",
+        "/images/products/sculpt-azure-xanh-thanh-thien-short-sleeve-ao-coc-tay-2.webp",
+        "/images/products/sculpt-azure-xanh-thanh-thien-short-sleeve-ao-coc-tay-3.webp"
+      ],
+      "colors": ["#0A6080", "#000000"],
+      "badge": null
+    },
+    {
+      "slug": "sculpt-azure-xanh-thanh-thien-standard-leggings-thuong",
+      "name": "Sculpt - Azure (Xanh Thanh Thiên) - Standard Leggings Thường",
+      "category": "Standard Leggings Thường",
+      "price": 650000,
+      "compareAt": null,
+      "rating": 4.5,
+      "reviews": 4,
+      "images": [
+        "/images/products/sculpt-azure-xanh-thanh-thien-standard-leggings-thuong-1.jpg",
+        "/images/products/sculpt-azure-xanh-thanh-thien-standard-leggings-thuong-2.webp",
+        "/images/products/sculpt-azure-xanh-thanh-thien-standard-leggings-thuong-3.webp"
+      ],
+      "colors": ["#0A6080", "#000000"],
+      "badge": null
+    },
+    {
+      "slug": "sculpt-azure-xanh-thanh-thien-flare-leggings-loe",
+      "name": "Sculpt - Azure (Xanh Thanh Thiên) - Flare Leggings Loe",
+      "category": "Flare Leggings Loe",
+      "price": 650000,
+      "compareAt": null,
+      "rating": 4.8,
+      "reviews": 4,
+      "images": [
+        "/images/products/sculpt-azure-xanh-thanh-thien-flare-leggings-loe-1.jpg",
+        "/images/products/sculpt-azure-xanh-thanh-thien-flare-leggings-loe-2.webp",
+        "/images/products/sculpt-azure-xanh-thanh-thien-flare-leggings-loe-3.webp"
+      ],
+      "colors": ["#0A6080", "#000000"],
+      "badge": null
+    },
+    {
+      "slug": "contour-bra-smoky-navy-xanh-navy-khoi",
+      "name": "Contour Bra - Xanh Navy Khói",
+      "category": "Xanh Navy Khói",
+      "price": 500000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/contour-bra-smoky-navy-xanh-navy-khoi-1.jpg",
+        "/images/products/contour-bra-smoky-navy-xanh-navy-khoi-2.webp",
+        "/images/products/contour-bra-smoky-navy-xanh-navy-khoi-3.webp"
+      ],
+      "colors": ["#3B4A66", "#C3B091"],
+      "badge": null
+    },
+    {
+      "slug": "contour-capri-smoky-navy-xanh-navy-khoi",
+      "name": "Contour Capri - Xanh Navy Khói",
+      "category": "Xanh Navy Khói",
+      "price": 650000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/contour-capri-smoky-navy-xanh-navy-khoi-1.jpg",
+        "/images/products/contour-capri-smoky-navy-xanh-navy-khoi-2.webp",
+        "/images/products/contour-capri-smoky-navy-xanh-navy-khoi-3.webp"
+      ],
+      "colors": ["#3B4A66", "#C3B091"],
+      "badge": null
+    },
+    {
+      "slug": "contour-bra-kaki-nau-kaki",
+      "name": "Contour Bra - Nâu Kaki",
+      "category": "Nâu Kaki",
+      "price": 500000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/contour-bra-kaki-nau-kaki-1.webp",
+        "/images/products/contour-bra-kaki-nau-kaki-2.webp",
+        "/images/products/contour-bra-kaki-nau-kaki-3.jpg"
+      ],
+      "colors": ["#C3B091", "#3B4A66"],
+      "badge": null
+    },
+    {
+      "slug": "contour-capri-kaki-nau-kaki",
+      "name": "Contour Capri - Nâu Kaki",
+      "category": "Nâu Kaki",
+      "price": 650000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/contour-capri-kaki-nau-kaki-1.jpg",
+        "/images/products/contour-capri-kaki-nau-kaki-2.webp",
+        "/images/products/contour-capri-kaki-nau-kaki-3.webp"
+      ],
+      "colors": ["#C3B091", "#3B4A66"],
+      "badge": null
+    },
+    {
+      "slug": "track-jacket-white-brown-trang-nau",
+      "name": "Track Jacket - Trắng/Nâu",
+      "category": "Trắng/Nâu",
+      "price": 750000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/track-jacket-white-brown-trang-nau-1.jpg",
+        "/images/products/track-jacket-white-brown-trang-nau-2.webp",
+        "/images/products/track-jacket-white-brown-trang-nau-3.webp"
+      ],
+      "colors": [
+        "linear-gradient(135deg, #FFFFFF 0 50%, #6B4226 50% 100%)",
+        "linear-gradient(135deg, #2E8B57 0 50%, #FFFFFF 50% 100%)"
+      ],
+      "badge": null
+    },
+    {
+      "slug": "track-bra-white-brown-trang-nau",
+      "name": "Track Bra - Trắng/Nâu",
+      "category": "Trắng/Nâu",
+      "price": 500000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/track-bra-white-brown-trang-nau-1.webp",
+        "/images/products/track-bra-white-brown-trang-nau-2.webp",
+        "/images/products/track-bra-white-brown-trang-nau-3.jpg"
+      ],
+      "colors": [
+        "linear-gradient(135deg, #FFFFFF 0 50%, #6B4226 50% 100%)",
+        "linear-gradient(135deg, #2E8B57 0 50%, #FFFFFF 50% 100%)"
+      ],
+      "badge": null
+    },
+    {
+      "slug": "track-skirts-white-brown-trang-nau",
+      "name": "Track Skirts - Trắng/Nâu",
+      "category": "Trắng/Nâu",
+      "price": 550000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/track-skirts-white-brown-trang-nau-1.jpg",
+        "/images/products/track-skirts-white-brown-trang-nau-2.webp",
+        "/images/products/track-skirts-white-brown-trang-nau-3.webp"
+      ],
+      "colors": [
+        "linear-gradient(135deg, #FFFFFF 0 50%, #6B4226 50% 100%)",
+        "linear-gradient(135deg, #2E8B57 0 50%, #FFFFFF 50% 100%)"
+      ],
+      "badge": null
+    },
+    {
+      "slug": "track-jacket-green-white-xanh-trang",
+      "name": "Track Jacket - Xanh/Trắng",
+      "category": "Xanh/Trắng",
+      "price": 750000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/track-jacket-green-white-xanh-trang-1.jpg",
+        "/images/products/track-jacket-green-white-xanh-trang-2.webp",
+        "/images/products/track-jacket-green-white-xanh-trang-3.webp"
+      ],
+      "colors": [
+        "linear-gradient(135deg, #2E8B57 0 50%, #FFFFFF 50% 100%)",
+        "linear-gradient(135deg, #FFFFFF 0 50%, #6B4226 50% 100%)"
+      ],
+      "badge": null
+    },
+    {
+      "slug": "track-bra-green-white-xanh-trang",
+      "name": "Track Bra - Xanh/Trắng",
+      "category": "Xanh/Trắng",
+      "price": 500000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/track-bra-green-white-xanh-trang-1.webp",
+        "/images/products/track-bra-green-white-xanh-trang-2.webp",
+        "/images/products/track-bra-green-white-xanh-trang-3.jpg"
+      ],
+      "colors": [
+        "linear-gradient(135deg, #2E8B57 0 50%, #FFFFFF 50% 100%)",
+        "linear-gradient(135deg, #FFFFFF 0 50%, #6B4226 50% 100%)"
+      ],
+      "badge": null
+    },
+    {
+      "slug": "track-skirts-green-white-xanh-trang",
+      "name": "Track Skirts - Xanh/Trắng",
+      "category": "Xanh/Trắng",
+      "price": 550000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/track-skirts-green-white-xanh-trang-1.jpg",
+        "/images/products/track-skirts-green-white-xanh-trang-2.webp",
+        "/images/products/track-skirts-green-white-xanh-trang-3.webp"
+      ],
+      "colors": [
+        "linear-gradient(135deg, #2E8B57 0 50%, #FFFFFF 50% 100%)",
+        "linear-gradient(135deg, #FFFFFF 0 50%, #6B4226 50% 100%)"
+      ],
+      "badge": null
+    },
+    {
+      "slug": "serene-bra-brown-nau",
+      "name": "Serene Bra - Nâu",
+      "category": "Nâu",
+      "price": 500000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/serene-bra-brown-nau-1.jpg",
+        "/images/products/serene-bra-brown-nau-2.webp",
+        "/images/products/serene-bra-brown-nau-3.webp"
+      ],
+      "colors": ["#6B4226", "#F3E5AB", "#89CFF0", "#cccccc"],
+      "badge": null
+    },
+    {
+      "slug": "serene-shorts-brown-nau",
+      "name": "Serene Shorts - Nâu",
+      "category": "Nâu",
+      "price": 550000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/serene-shorts-brown-nau-1.jpg",
+        "/images/products/serene-shorts-brown-nau-2.webp",
+        "/images/products/serene-shorts-brown-nau-3.webp"
+      ],
+      "colors": ["#6B4226", "#F3E5AB", "#89CFF0"],
+      "badge": null
+    },
+    {
+      "slug": "serene-bra-buttermilk-vang-kem",
+      "name": "Serene Bra - Vàng Kem",
+      "category": "Vàng Kem",
+      "price": 500000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/serene-bra-buttermilk-vang-kem-1.webp",
+        "/images/products/serene-bra-buttermilk-vang-kem-2.webp",
+        "/images/products/serene-bra-buttermilk-vang-kem-3.webp"
+      ],
+      "colors": ["#F3E5AB", "#6B4226", "#89CFF0", "#cccccc"],
+      "badge": null
+    },
+    {
+      "slug": "serene-shorts-buttermilk-vang-kem",
+      "name": "Serene Shorts - Vàng Kem",
+      "category": "Vàng Kem",
+      "price": 550000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/serene-shorts-buttermilk-vang-kem-1.webp",
+        "/images/products/serene-shorts-buttermilk-vang-kem-2.webp",
+        "/images/products/serene-shorts-buttermilk-vang-kem-3.webp"
+      ],
+      "colors": ["#F3E5AB", "#6B4226", "#89CFF0"],
+      "badge": null
+    },
+    {
+      "slug": "serene-bra-baby-blue-xanh-baby",
+      "name": "Serene Bra - Xanh Baby",
+      "category": "Xanh Baby",
+      "price": 500000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/serene-bra-baby-blue-xanh-baby-1.webp",
+        "/images/products/serene-bra-baby-blue-xanh-baby-2.webp",
+        "/images/products/serene-bra-baby-blue-xanh-baby-3.webp"
+      ],
+      "colors": ["#89CFF0", "#6B4226", "#F3E5AB", "#cccccc"],
+      "badge": null
+    },
+    {
+      "slug": "serene-shorts-baby-blue-xanh-baby",
+      "name": "Serene Shorts - Xanh Baby",
+      "category": "Xanh Baby",
+      "price": 550000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/serene-shorts-baby-blue-xanh-baby-1.jpg",
+        "/images/products/serene-shorts-baby-blue-xanh-baby-2.webp",
+        "/images/products/serene-shorts-baby-blue-xanh-baby-3.webp"
+      ],
+      "colors": ["#89CFF0", "#6B4226", "#F3E5AB"],
+      "badge": null
+    },
+    {
+      "slug": "serene-bra-coconut-trang-kem",
+      "name": "Serene Bra - Trắng Kem",
+      "category": "Trắng Kem",
+      "price": 500000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/serene-bra-coconut-trang-kem-1.jpg",
+        "/images/products/serene-bra-coconut-trang-kem-2.webp",
+        "/images/products/serene-bra-coconut-trang-kem-3.webp"
+      ],
+      "colors": [
+        "rgb(204, 204, 204)",
+        "rgb(107, 66, 38)",
+        "rgb(243, 229, 171)",
+        "rgb(137, 207, 240)"
+      ],
+      "badge": null
+    },
+    {
+      "slug": "serene-leggings-coconut-trang-kem",
+      "name": "Serene Leggings - Trắng Kem",
+      "category": "Trắng Kem",
+      "price": 650000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/serene-leggings-coconut-trang-kem-1.jpg",
+        "/images/products/serene-leggings-coconut-trang-kem-2.webp",
+        "/images/products/serene-leggings-coconut-trang-kem-3.webp"
+      ],
+      "colors": ["rgb(204, 204, 204)"],
+      "badge": null
+    },
+    {
+      "slug": "serene-bra-tangerine-cam",
+      "name": "Serene Bra - Cam",
+      "category": "Cam",
+      "price": 500000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/serene-bra-tangerine-cam-1.jpg",
+        "/images/products/serene-bra-tangerine-cam-2.webp",
+        "/images/products/serene-bra-tangerine-cam-3.webp"
+      ],
+      "colors": [
+        "rgb(204, 204, 204)",
+        "rgb(107, 66, 38)",
+        "rgb(243, 229, 171)",
+        "rgb(137, 207, 240)"
+      ],
+      "badge": null
+    },
+    {
+      "slug": "serene-leggings-tangerine-cam",
+      "name": "Serene Leggings - Cam",
+      "category": "Cam",
+      "price": 650000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/serene-leggings-tangerine-cam-1.jpg",
+        "/images/products/serene-leggings-tangerine-cam-2.webp",
+        "/images/products/serene-leggings-tangerine-cam-3.webp"
+      ],
+      "colors": ["rgb(204, 204, 204)"],
+      "badge": null
+    },
+    {
+      "slug": "smash-top-aubergine-tim-ca",
+      "name": "Smash Top - Tím Cà",
+      "category": "Tím Cà",
+      "price": 500000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/smash-top-aubergine-tim-ca-1.jpg",
+        "/images/products/smash-top-aubergine-tim-ca-2.webp",
+        "/images/products/smash-top-aubergine-tim-ca-3.webp"
+      ],
+      "colors": [],
+      "badge": null
+    },
+    {
+      "slug": "smash-skirts-aubergine-tim-ca",
+      "name": "Smash Skirts - Tím Cà",
+      "category": "Tím Cà",
+      "price": 550000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/smash-skirts-aubergine-tim-ca-1.webp",
+        "/images/products/smash-skirts-aubergine-tim-ca-2.jpg",
+        "/images/products/smash-skirts-aubergine-tim-ca-3.webp"
+      ],
+      "colors": [],
+      "badge": null
+    },
+    {
+      "slug": "smash-pink-skirt",
+      "name": "Smash - Váy Hồng",
+      "category": "Váy Hồng",
+      "price": 550000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/smash-pink-skirt-1.webp",
+        "/images/products/smash-pink-skirt-2.webp",
+        "/images/products/smash-pink-skirt-3.webp"
+      ],
+      "colors": [
+        "rgb(255, 182, 193)",
+        "rgb(0, 0, 0)",
+        "rgb(107, 66, 38)",
+        "rgb(138, 154, 91)"
+      ],
+      "badge": null
+    },
+    {
+      "slug": "smash-black-top",
+      "name": "Smash - Áo Đen",
+      "category": "Áo Đen",
+      "price": 500000,
+      "compareAt": null,
+      "rating": 4.3,
+      "reviews": 3,
+      "images": [
+        "/images/products/smash-black-top-1.webp",
+        "/images/products/smash-black-top-2.webp",
+        "/images/products/smash-black-top-3.webp"
+      ],
+      "colors": [
+        "rgb(0, 0, 0)",
+        "rgb(255, 182, 193)",
+        "rgb(107, 66, 38)",
+        "rgb(138, 154, 91)"
+      ],
+      "badge": null
+    },
+    {
+      "slug": "smash-black-skirt",
+      "name": "Smash - Váy Đen",
+      "category": "Váy Đen",
+      "price": 550000,
+      "compareAt": null,
+      "rating": 4.7,
+      "reviews": 3,
+      "images": [
+        "/images/products/smash-black-skirt-1.webp",
+        "/images/products/smash-black-skirt-2.webp",
+        "/images/products/smash-black-skirt-3.webp"
+      ],
+      "colors": [
+        "rgb(0, 0, 0)",
+        "rgb(255, 182, 193)",
+        "rgb(107, 66, 38)",
+        "rgb(138, 154, 91)"
+      ],
+      "badge": null
+    },
+    {
+      "slug": "smash-brown-top",
+      "name": "Smash - Áo Nâu",
+      "category": "Áo Nâu",
+      "price": 500000,
+      "compareAt": null,
+      "rating": 4.7,
+      "reviews": 3,
+      "images": [
+        "/images/products/smash-brown-top-1.webp",
+        "/images/products/smash-brown-top-2.webp",
+        "/images/products/smash-brown-top-3.webp"
+      ],
+      "colors": [
+        "rgb(107, 66, 38)",
+        "rgb(255, 182, 193)",
+        "rgb(0, 0, 0)",
+        "rgb(138, 154, 91)"
+      ],
+      "badge": null
+    },
+    {
+      "slug": "smash-brown-skirt",
+      "name": "Smash - Váy Nâu",
+      "category": "Váy Nâu",
+      "price": 550000,
+      "compareAt": null,
+      "rating": 4.7,
+      "reviews": 3,
+      "images": [
+        "/images/products/smash-brown-skirt-1.webp",
+        "/images/products/smash-brown-skirt-2.webp",
+        "/images/products/smash-brown-skirt-3.webp"
+      ],
+      "colors": [
+        "rgb(107, 66, 38)",
+        "rgb(255, 182, 193)",
+        "rgb(0, 0, 0)",
+        "rgb(138, 154, 91)"
+      ],
+      "badge": null
+    },
+    {
+      "slug": "smash-moss-top",
+      "name": "Smash - Áo Moss",
+      "category": "Áo Moss",
+      "price": 500000,
+      "compareAt": null,
+      "rating": 4.7,
+      "reviews": 3,
+      "images": [
+        "/images/products/smash-moss-top-1.webp",
+        "/images/products/smash-moss-top-2.webp",
+        "/images/products/smash-moss-top-3.webp"
+      ],
+      "colors": [
+        "rgb(138, 154, 91)",
+        "rgb(255, 182, 193)",
+        "rgb(0, 0, 0)",
+        "rgb(107, 66, 38)"
+      ],
+      "badge": null
+    },
+    {
+      "slug": "smash-moss-skirt",
+      "name": "Smash - Váy Moss",
+      "category": "Váy Moss",
+      "price": 550000,
+      "compareAt": null,
+      "rating": 4.8,
+      "reviews": 4,
+      "images": [
+        "/images/products/smash-moss-skirt-1.webp",
+        "/images/products/smash-moss-skirt-2.webp",
+        "/images/products/smash-moss-skirt-3.webp"
+      ],
+      "colors": [
+        "rgb(138, 154, 91)",
+        "rgb(255, 182, 193)",
+        "rgb(0, 0, 0)",
+        "rgb(107, 66, 38)"
+      ],
+      "badge": null
+    },
+    {
+      "slug": "off-duty-cover-black-den",
+      "name": "Off Duty Cover - Đen",
+      "category": "Đen",
+      "price": 550000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/off-duty-cover-black-den-1.webp",
+        "/images/products/off-duty-cover-black-den-2.webp",
+        "/images/products/off-duty-cover-black-den-3.webp"
+      ],
+      "colors": ["rgb(0, 0, 0)", "rgb(255, 255, 255)"],
+      "badge": null
+    },
+    {
+      "slug": "off-duty-cover-white-trang",
+      "name": "Off Duty Cover - Trắng",
+      "category": "Trắng",
+      "price": 550000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/off-duty-cover-white-trang-1.jpg",
+        "/images/products/off-duty-cover-white-trang-2.webp",
+        "/images/products/off-duty-cover-white-trang-3.webp"
+      ],
+      "colors": ["rgb(255, 255, 255)", "rgb(0, 0, 0)"],
+      "badge": null
+    },
+    {
+      "slug": "air-bra-cyan-blue-xanh-lo",
+      "name": "Air Bra - Xanh Lơ",
+      "category": "Xanh Lơ",
+      "price": 500000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/air-bra-cyan-blue-xanh-lo-1.webp",
+        "/images/products/air-bra-cyan-blue-xanh-lo-2.webp",
+        "/images/products/air-bra-cyan-blue-xanh-lo-3.jpg"
+      ],
+      "colors": ["rgb(42, 157, 214)", "rgb(27, 42, 74)"],
+      "badge": null
+    },
+    {
+      "slug": "air-tank-cyan-blue-xanh-lo",
+      "name": "Air Tank - Xanh Lơ",
+      "category": "Xanh Lơ",
+      "price": 500000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/air-tank-cyan-blue-xanh-lo-1.webp",
+        "/images/products/air-tank-cyan-blue-xanh-lo-2.webp",
+        "/images/products/air-tank-cyan-blue-xanh-lo-3.jpg"
+      ],
+      "colors": ["rgb(42, 157, 214)", "rgb(27, 42, 74)"],
+      "badge": null
+    },
+    {
+      "slug": "air-leggings-cyan-blue-xanh-lo",
+      "name": "Air Leggings - Xanh Lơ",
+      "category": "Xanh Lơ",
+      "price": 650000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/air-leggings-cyan-blue-xanh-lo-1.jpg",
+        "/images/products/air-leggings-cyan-blue-xanh-lo-2.webp",
+        "/images/products/air-leggings-cyan-blue-xanh-lo-3.webp"
+      ],
+      "colors": ["rgb(42, 157, 214)", "rgb(27, 42, 74)"],
+      "badge": null
+    },
+    {
+      "slug": "air-tank-navy",
+      "name": "Air Tank - Navy",
+      "category": "Navy",
+      "price": 500000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/air-tank-navy-1.webp",
+        "/images/products/air-tank-navy-2.jpg",
+        "/images/products/air-tank-navy-3.webp"
+      ],
+      "colors": ["rgb(27, 42, 74)", "rgb(42, 157, 214)"],
+      "badge": null
+    },
+    {
+      "slug": "air-bra-navy",
+      "name": "Air Bra - Navy",
+      "category": "Navy",
+      "price": 500000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/air-bra-navy-1.jpg",
+        "/images/products/air-bra-navy-2.webp",
+        "/images/products/air-bra-navy-3.webp"
+      ],
+      "colors": ["rgb(27, 42, 74)", "rgb(42, 157, 214)"],
+      "badge": null
+    },
+    {
+      "slug": "air-leggings-navy",
+      "name": "Air Leggings - Navy",
+      "category": "Navy",
+      "price": 650000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/air-leggings-navy-1.jpg",
+        "/images/products/air-leggings-navy-2.webp",
+        "/images/products/air-leggings-navy-3.webp"
+      ],
+      "colors": ["rgb(27, 42, 74)", "rgb(42, 157, 214)"],
+      "badge": null
+    },
+    {
+      "slug": "serene-2-0-bra-buttermilk-vang-kem",
+      "name": "Serene 2.0 Bra - Vàng Kem",
+      "category": "Vàng Kem",
+      "price": 500000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/serene-2-0-bra-buttermilk-vang-kem-1.webp",
+        "/images/products/serene-2-0-bra-buttermilk-vang-kem-2.jpg",
+        "/images/products/serene-2-0-bra-buttermilk-vang-kem-3.webp"
+      ],
+      "colors": ["rgb(243, 229, 171)", "rgb(137, 207, 240)"],
+      "badge": null
+    },
+    {
+      "slug": "serene-2-0-bra-baby-blue-xanh-baby",
+      "name": "Serene 2.0 Bra - Xanh Baby",
+      "category": "Xanh Baby",
+      "price": 500000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/serene-2-0-bra-baby-blue-xanh-baby-1.webp",
+        "/images/products/serene-2-0-bra-baby-blue-xanh-baby-2.webp",
+        "/images/products/serene-2-0-bra-baby-blue-xanh-baby-3.webp"
+      ],
+      "colors": ["rgb(137, 207, 240)", "rgb(243, 229, 171)"],
+      "badge": null
+    },
+    {
+      "slug": "love-skirts-dusty-rose-hong-tro",
+      "name": "Love Skirts - Hồng Tro",
+      "category": "Hồng Tro",
+      "price": 600000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/love-skirts-dusty-rose-hong-tro-1.webp",
+        "/images/products/love-skirts-dusty-rose-hong-tro-2.webp",
+        "/images/products/love-skirts-dusty-rose-hong-tro-3.webp"
+      ],
+      "colors": [
+        "rgb(196, 164, 164)",
+        "rgb(222, 49, 99)",
+        "rgb(255, 255, 255)"
+      ],
+      "badge": null
+    },
+    {
+      "slug": "love-skirts-cherry-do-cherry",
+      "name": "Love Skirts - Đỏ Cherry",
+      "category": "Đỏ Cherry",
+      "price": 600000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/love-skirts-cherry-do-cherry-1.webp",
+        "/images/products/love-skirts-cherry-do-cherry-2.webp",
+        "/images/products/love-skirts-cherry-do-cherry-3.webp"
+      ],
+      "colors": [
+        "rgb(222, 49, 99)",
+        "rgb(196, 164, 164)",
+        "rgb(255, 255, 255)"
+      ],
+      "badge": null
+    },
+    {
+      "slug": "love-skirts-white-trang",
+      "name": "Love Skirts - Trắng",
+      "category": "Trắng",
+      "price": 600000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/love-skirts-white-trang-1.webp",
+        "/images/products/love-skirts-white-trang-2.webp",
+        "/images/products/love-skirts-white-trang-3.webp"
+      ],
+      "colors": [
+        "rgb(255, 255, 255)",
+        "rgb(196, 164, 164)",
+        "rgb(222, 49, 99)"
+      ],
+      "badge": null
+    },
+    {
+      "slug": "ace-top-cherry-do-cherry",
+      "name": "Ace Top - Đỏ Cherry",
+      "category": "Đỏ Cherry",
+      "price": 500000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/ace-top-cherry-do-cherry-1.webp",
+        "/images/products/ace-top-cherry-do-cherry-2.webp",
+        "/images/products/ace-top-cherry-do-cherry-3.webp"
+      ],
+      "colors": ["rgb(222, 49, 99)", "rgb(107, 66, 38)"],
+      "badge": null
+    },
+    {
+      "slug": "ace-skirts-blue-xanh-duong",
+      "name": "Ace Skirts - Xanh Dương",
+      "category": "Xanh Dương",
+      "price": 550000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/ace-skirts-blue-xanh-duong-1.webp",
+        "/images/products/ace-skirts-blue-xanh-duong-2.webp",
+        "/images/products/ace-skirts-blue-xanh-duong-3.webp"
+      ],
+      "colors": [],
+      "badge": null
+    },
+    {
+      "slug": "ace-top-brown-nau",
+      "name": "Ace Top - Nâu",
+      "category": "Nâu",
+      "price": 500000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/ace-top-brown-nau-1.webp",
+        "/images/products/ace-top-brown-nau-2.webp",
+        "/images/products/ace-top-brown-nau-3.webp"
+      ],
+      "colors": ["rgb(107, 66, 38)", "rgb(222, 49, 99)"],
+      "badge": null
+    },
+    {
+      "slug": "ace-white-top",
+      "name": "Ace - Áo Trắng",
+      "category": "Áo Trắng",
+      "price": 500000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/ace-white-top-1.webp",
+        "/images/products/ace-white-top-2.webp",
+        "/images/products/ace-white-top-3.webp"
+      ],
+      "colors": ["rgb(255, 255, 255)", "rgb(0, 0, 0)", "rgb(27, 42, 74)"],
+      "badge": null
+    },
+    {
+      "slug": "ace-white-skirt",
+      "name": "Ace - Váy Trắng",
+      "category": "Váy Trắng",
+      "price": 550000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/ace-white-skirt-1.webp",
+        "/images/products/ace-white-skirt-2.webp",
+        "/images/products/ace-white-skirt-3.webp"
+      ],
+      "colors": ["rgb(255, 255, 255)", "rgb(0, 0, 0)", "rgb(27, 42, 74)"],
+      "badge": null
+    },
+    {
+      "slug": "ace-black-top",
+      "name": "Ace - Áo Đen",
+      "category": "Áo Đen",
+      "price": 500000,
+      "compareAt": null,
+      "rating": 4.7,
+      "reviews": 3,
+      "images": [
+        "/images/products/ace-black-top-1.webp",
+        "/images/products/ace-black-top-2.webp",
+        "/images/products/ace-black-top-3.webp"
+      ],
+      "colors": ["rgb(0, 0, 0)", "rgb(255, 255, 255)", "rgb(27, 42, 74)"],
+      "badge": null
+    },
+    {
+      "slug": "ace-black-skirt",
+      "name": "Ace - Váy Đen",
+      "category": "Váy Đen",
+      "price": 550000,
+      "compareAt": null,
+      "rating": 4.8,
+      "reviews": 4,
+      "images": [
+        "/images/products/ace-black-skirt-1.webp",
+        "/images/products/ace-black-skirt-2.webp",
+        "/images/products/ace-black-skirt-3.jpg"
+      ],
+      "colors": ["rgb(0, 0, 0)", "rgb(255, 255, 255)", "rgb(27, 42, 74)"],
+      "badge": null
+    },
+    {
+      "slug": "ace-navy-top",
+      "name": "Ace - Áo Navy",
+      "category": "Áo Navy",
+      "price": 500000,
+      "compareAt": null,
+      "rating": 3.8,
+      "reviews": 6,
+      "images": [
+        "/images/products/ace-navy-top-1.webp",
+        "/images/products/ace-navy-top-2.webp",
+        "/images/products/ace-navy-top-3.webp"
+      ],
+      "colors": ["rgb(27, 42, 74)", "rgb(255, 255, 255)", "rgb(0, 0, 0)"],
+      "badge": null
+    },
+    {
+      "slug": "ace-navy-skirt",
+      "name": "Ace - Váy Navy",
+      "category": "Váy Navy",
+      "price": 550000,
+      "compareAt": null,
+      "rating": 3.7,
+      "reviews": 6,
+      "images": [
+        "/images/products/ace-navy-skirt-1.webp",
+        "/images/products/ace-navy-skirt-2.webp",
+        "/images/products/ace-navy-skirt-3.webp"
+      ],
+      "colors": ["rgb(27, 42, 74)", "rgb(255, 255, 255)", "rgb(0, 0, 0)"],
+      "badge": null
+    },
+    {
+      "slug": "fleur-bra-black-den",
+      "name": "Fleur Bra - Đen",
+      "category": "Đen",
+      "price": 500000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": ["/images/products/fleur-bra-black-den-1.png"],
+      "colors": ["rgb(0, 0, 0)", "rgb(107, 66, 38)", "rgb(255, 248, 220)"],
+      "badge": null
+    },
+    {
+      "slug": "fleur-leggings-black-den",
+      "name": "Fleur Leggings - Đen",
+      "category": "Đen",
+      "price": 650000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/fleur-leggings-black-den-1.webp",
+        "/images/products/fleur-leggings-black-den-2.webp",
+        "/images/products/fleur-leggings-black-den-3.webp"
+      ],
+      "colors": ["rgb(0, 0, 0)", "rgb(107, 66, 38)", "rgb(255, 248, 220)"],
+      "badge": null
+    },
+    {
+      "slug": "fleur-bra-brown-nau",
+      "name": "Fleur Bra - Nâu",
+      "category": "Nâu",
+      "price": 500000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/fleur-bra-brown-nau-1.webp",
+        "/images/products/fleur-bra-brown-nau-2.webp",
+        "/images/products/fleur-bra-brown-nau-3.webp"
+      ],
+      "colors": ["rgb(107, 66, 38)", "rgb(0, 0, 0)", "rgb(255, 248, 220)"],
+      "badge": null
+    },
+    {
+      "slug": "fleur-leggings-brown-nau",
+      "name": "Fleur Leggings - Nâu",
+      "category": "Nâu",
+      "price": 650000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/fleur-leggings-brown-nau-1.webp",
+        "/images/products/fleur-leggings-brown-nau-2.webp",
+        "/images/products/fleur-leggings-brown-nau-3.webp"
+      ],
+      "colors": ["rgb(107, 66, 38)", "rgb(0, 0, 0)", "rgb(255, 248, 220)"],
+      "badge": null
+    },
+    {
+      "slug": "fleur-bra-butter-vang-bo",
+      "name": "Fleur Bra - Vàng Bơ",
+      "category": "Vàng Bơ",
+      "price": 500000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/fleur-bra-butter-vang-bo-1.webp",
+        "/images/products/fleur-bra-butter-vang-bo-2.webp",
+        "/images/products/fleur-bra-butter-vang-bo-3.webp"
+      ],
+      "colors": ["rgb(255, 248, 220)", "rgb(0, 0, 0)", "rgb(107, 66, 38)"],
+      "badge": null
+    },
+    {
+      "slug": "fleur-leggings-butter-vang-bo",
+      "name": "Fleur Leggings - Vàng Bơ",
+      "category": "Vàng Bơ",
+      "price": 650000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/fleur-leggings-butter-vang-bo-1.webp",
+        "/images/products/fleur-leggings-butter-vang-bo-2.webp",
+        "/images/products/fleur-leggings-butter-vang-bo-3.webp"
+      ],
+      "colors": ["rgb(255, 248, 220)", "rgb(0, 0, 0)", "rgb(107, 66, 38)"],
+      "badge": null
+    },
+    {
+      "slug": "align-bra-pastel-mint-xanh-pastel",
+      "name": "Align Bra - Xanh Pastel",
+      "category": "Xanh Pastel",
+      "price": 500000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/align-bra-pastel-mint-xanh-pastel-1.webp",
+        "/images/products/align-bra-pastel-mint-xanh-pastel-2.webp",
+        "/images/products/align-bra-pastel-mint-xanh-pastel-3.webp"
+      ],
+      "colors": ["rgb(200, 230, 201)", "rgb(0, 0, 0)", "rgb(255, 209, 220)"],
+      "badge": null
+    },
+    {
+      "slug": "align-leggings-pastel-mint-xanh-pastel",
+      "name": "Align Leggings - Xanh Pastel",
+      "category": "Xanh Pastel",
+      "price": 650000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/align-leggings-pastel-mint-xanh-pastel-1.webp",
+        "/images/products/align-leggings-pastel-mint-xanh-pastel-2.webp",
+        "/images/products/align-leggings-pastel-mint-xanh-pastel-3.webp"
+      ],
+      "colors": ["rgb(200, 230, 201)", "rgb(0, 0, 0)", "rgb(255, 209, 220)"],
+      "badge": null
+    },
+    {
+      "slug": "align-bra-black-den",
+      "name": "Align Bra - Đen",
+      "category": "Đen",
+      "price": 500000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/align-bra-black-den-1.webp",
+        "/images/products/align-bra-black-den-2.png",
+        "/images/products/align-bra-black-den-3.webp"
+      ],
+      "colors": ["rgb(0, 0, 0)", "rgb(200, 230, 201)", "rgb(255, 209, 220)"],
+      "badge": null
+    },
+    {
+      "slug": "align-leggings-black-den",
+      "name": "Align Leggings - Đen",
+      "category": "Đen",
+      "price": 650000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/align-leggings-black-den-1.webp",
+        "/images/products/align-leggings-black-den-2.webp",
+        "/images/products/align-leggings-black-den-3.webp"
+      ],
+      "colors": ["rgb(0, 0, 0)", "rgb(200, 230, 201)", "rgb(255, 209, 220)"],
+      "badge": null
+    },
+    {
+      "slug": "align-black",
+      "name": "Align Set - Đen",
+      "category": "Đen",
+      "price": 1150000,
+      "compareAt": null,
+      "rating": 5,
+      "reviews": 5,
+      "images": [
+        "/images/products/align-black-1.jpg",
+        "/images/products/align-black-2.jpg",
+        "/images/products/align-black-3.jpg"
+      ],
+      "colors": ["rgb(0, 0, 0)", "rgb(200, 230, 201)", "rgb(255, 209, 220)"],
+      "badge": null
+    },
+    {
+      "slug": "align-bra-pastel-pink-hong-pastel",
+      "name": "Align Bra - Hồng Pastel",
+      "category": "Hồng Pastel",
+      "price": 500000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/align-bra-pastel-pink-hong-pastel-1.webp",
+        "/images/products/align-bra-pastel-pink-hong-pastel-2.webp",
+        "/images/products/align-bra-pastel-pink-hong-pastel-3.webp"
+      ],
+      "colors": ["rgb(255, 209, 220)", "rgb(200, 230, 201)", "rgb(0, 0, 0)"],
+      "badge": null
+    },
+    {
+      "slug": "align-leggings-pastel-pink-hong-pastel",
+      "name": "Align Leggings - Hồng Pastel",
+      "category": "Hồng Pastel",
+      "price": 650000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/align-leggings-pastel-pink-hong-pastel-1.webp",
+        "/images/products/align-leggings-pastel-pink-hong-pastel-2.webp",
+        "/images/products/align-leggings-pastel-pink-hong-pastel-3.webp"
+      ],
+      "colors": ["rgb(255, 209, 220)", "rgb(200, 230, 201)", "rgb(0, 0, 0)"],
+      "badge": null
+    },
+    {
+      "slug": "shape-bra-lava-do",
+      "name": "Shape Bra - Đỏ",
+      "category": "Đỏ",
+      "price": 500000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/shape-bra-lava-do-1.webp",
+        "/images/products/shape-bra-lava-do-2.webp",
+        "/images/products/shape-bra-lava-do-3.webp"
+      ],
+      "colors": ["rgb(207, 16, 32)", "rgb(243, 185, 168)"],
+      "badge": null
+    },
+    {
+      "slug": "shape-leggings-lava-do",
+      "name": "Shape Leggings - Đỏ",
+      "category": "Đỏ",
+      "price": 650000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/shape-leggings-lava-do-1.webp",
+        "/images/products/shape-leggings-lava-do-2.webp",
+        "/images/products/shape-leggings-lava-do-3.webp"
+      ],
+      "colors": ["rgb(207, 16, 32)", "rgb(243, 185, 168)"],
+      "badge": null
+    },
+    {
+      "slug": "shape-bra-peach-hong-cam",
+      "name": "Shape Bra - Hồng Cam",
+      "category": "Hồng Cam",
+      "price": 500000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/shape-bra-peach-hong-cam-1.webp",
+        "/images/products/shape-bra-peach-hong-cam-2.webp",
+        "/images/products/shape-bra-peach-hong-cam-3.webp"
+      ],
+      "colors": ["rgb(243, 185, 168)", "rgb(207, 16, 32)"],
+      "badge": null
+    },
+    {
+      "slug": "shape-leggings-peach-hong-cam",
+      "name": "Shape Leggings - Hồng Cam",
+      "category": "Hồng Cam",
+      "price": 650000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/shape-leggings-peach-hong-cam-1.webp",
+        "/images/products/shape-leggings-peach-hong-cam-2.webp",
+        "/images/products/shape-leggings-peach-hong-cam-3.webp"
+      ],
+      "colors": ["rgb(243, 185, 168)", "rgb(207, 16, 32)"],
+      "badge": null
+    },
+    {
+      "slug": "focus-bra-pink-red-do-hong",
+      "name": "Focus Bra - Đỏ Hồng",
+      "category": "Đỏ Hồng",
+      "price": 500000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/focus-bra-pink-red-do-hong-1.webp",
+        "/images/products/focus-bra-pink-red-do-hong-2.webp",
+        "/images/products/focus-bra-pink-red-do-hong-3.webp"
+      ],
+      "colors": ["rgb(237, 20, 61)", "rgb(255, 255, 255)"],
+      "badge": null
+    },
+    {
+      "slug": "focus-shorts-pink-red-do-hong",
+      "name": "Focus Shorts - Đỏ Hồng",
+      "category": "Đỏ Hồng",
+      "price": 550000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/focus-shorts-pink-red-do-hong-1.webp",
+        "/images/products/focus-shorts-pink-red-do-hong-2.webp",
+        "/images/products/focus-shorts-pink-red-do-hong-3.webp"
+      ],
+      "colors": ["rgb(237, 20, 61)", "rgb(255, 255, 255)"],
+      "badge": null
+    },
+    {
+      "slug": "focus-bra-white-trang",
+      "name": "Focus Bra - Trắng",
+      "category": "Trắng",
+      "price": 500000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/focus-bra-white-trang-1.webp",
+        "/images/products/focus-bra-white-trang-2.webp",
+        "/images/products/focus-bra-white-trang-3.webp"
+      ],
+      "colors": ["rgb(255, 255, 255)", "rgb(237, 20, 61)"],
+      "badge": null
+    },
+    {
+      "slug": "focus-shorts-white-trang",
+      "name": "Focus Shorts - Trắng",
+      "category": "Trắng",
+      "price": 550000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/focus-shorts-white-trang-1.webp",
+        "/images/products/focus-shorts-white-trang-2.webp",
+        "/images/products/focus-shorts-white-trang-3.webp"
+      ],
+      "colors": ["rgb(255, 255, 255)", "rgb(237, 20, 61)"],
+      "badge": null
+    },
+    {
+      "slug": "bare-shorts-brown-nau",
+      "name": "Bare Shorts - Nâu",
+      "category": "Nâu",
+      "price": 550000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/bare-shorts-brown-nau-1.webp",
+        "/images/products/bare-shorts-brown-nau-2.webp",
+        "/images/products/bare-shorts-brown-nau-3.webp"
+      ],
+      "colors": ["rgb(107, 66, 38)", "rgb(0, 0, 0)"],
+      "badge": null
+    },
+    {
+      "slug": "bare-shorts-black-den",
+      "name": "Bare Shorts - Đen",
+      "category": "Đen",
+      "price": 550000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/bare-shorts-black-den-1.webp",
+        "/images/products/bare-shorts-black-den-2.webp",
+        "/images/products/bare-shorts-black-den-3.webp"
+      ],
+      "colors": ["rgb(0, 0, 0)", "rgb(107, 66, 38)"],
+      "badge": null
+    },
+    {
+      "slug": "courtside-tank-black",
+      "name": "Rally Top - Đen",
+      "category": "Đen",
+      "price": 500000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/courtside-tank-black-1.jpg",
+        "/images/products/courtside-tank-black-2.webp",
+        "/images/products/courtside-tank-black-3.webp"
+      ],
+      "colors": ["rgb(0, 0, 0)", "rgb(255, 182, 193)"],
+      "badge": null
+    },
+    {
+      "slug": "courtside-pleated-skirt-black",
+      "name": "Rally Skirts - Đen",
+      "category": "Đen",
+      "price": 550000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/courtside-pleated-skirt-black-1.jpg",
+        "/images/products/courtside-pleated-skirt-black-2.webp",
+        "/images/products/courtside-pleated-skirt-black-3.webp"
+      ],
+      "colors": ["rgb(0, 0, 0)", "rgb(255, 182, 193)"],
+      "badge": null
+    },
+    {
+      "slug": "courtside-tank-pink",
+      "name": "Rally Top - Hồng",
+      "category": "Hồng",
+      "price": 500000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/courtside-tank-pink-1.jpg",
+        "/images/products/courtside-tank-pink-2.webp",
+        "/images/products/courtside-tank-pink-3.webp"
+      ],
+      "colors": ["rgb(255, 182, 193)", "rgb(0, 0, 0)"],
+      "badge": null
+    },
+    {
+      "slug": "courtside-pleated-skirt-pink",
+      "name": "Rally Skirts - Hồng",
+      "category": "Hồng",
+      "price": 550000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/courtside-pleated-skirt-pink-1.jpg",
+        "/images/products/courtside-pleated-skirt-pink-2.webp",
+        "/images/products/courtside-pleated-skirt-pink-3.webp"
+      ],
+      "colors": ["rgb(255, 182, 193)", "rgb(0, 0, 0)"],
+      "badge": null
+    },
+    {
+      "slug": "poise-bra-taupe-xam-nau",
+      "name": "Poise Bra - Xám Nâu",
+      "category": "Xám Nâu",
+      "price": 500000,
+      "compareAt": null,
+      "rating": 4.5,
+      "reviews": 4,
+      "images": [
+        "/images/products/poise-bra-taupe-xam-nau-1.webp",
+        "/images/products/poise-bra-taupe-xam-nau-2.webp",
+        "/images/products/poise-bra-taupe-xam-nau-3.webp"
+      ],
+      "colors": ["rgb(72, 60, 50)", "rgb(0, 0, 0)", "rgb(111, 45, 168)"],
+      "badge": null
+    },
+    {
+      "slug": "poise-leggings-taupe-xam-nau",
+      "name": "Poise Leggings - Xám Nâu",
+      "category": "Xám Nâu",
+      "price": 650000,
+      "compareAt": null,
+      "rating": 4.5,
+      "reviews": 4,
+      "images": [
+        "/images/products/poise-leggings-taupe-xam-nau-1.webp",
+        "/images/products/poise-leggings-taupe-xam-nau-2.webp",
+        "/images/products/poise-leggings-taupe-xam-nau-3.webp"
+      ],
+      "colors": ["rgb(72, 60, 50)", "rgb(0, 0, 0)", "rgb(111, 45, 168)"],
+      "badge": null
+    },
+    {
+      "slug": "poise-bra-black-den",
+      "name": "Poise Bra - Đen",
+      "category": "Đen",
+      "price": 500000,
+      "compareAt": null,
+      "rating": 4.8,
+      "reviews": 4,
+      "images": [
+        "/images/products/poise-bra-black-den-1.webp",
+        "/images/products/poise-bra-black-den-2.webp",
+        "/images/products/poise-bra-black-den-3.webp"
+      ],
+      "colors": ["rgb(0, 0, 0)", "rgb(72, 60, 50)", "rgb(111, 45, 168)"],
+      "badge": null
+    },
+    {
+      "slug": "poise-leggings-black-den",
+      "name": "Poise Leggings - Đen",
+      "category": "Đen",
+      "price": 650000,
+      "compareAt": null,
+      "rating": 4.8,
+      "reviews": 4,
+      "images": [
+        "/images/products/poise-leggings-black-den-1.webp",
+        "/images/products/poise-leggings-black-den-2.webp",
+        "/images/products/poise-leggings-black-den-3.webp"
+      ],
+      "colors": ["rgb(0, 0, 0)", "rgb(72, 60, 50)", "rgb(111, 45, 168)"],
+      "badge": null
+    },
+    {
+      "slug": "poise-bra-grape-tim",
+      "name": "Poise Bra - Tím",
+      "category": "Tím",
+      "price": 500000,
+      "compareAt": null,
+      "rating": 4.7,
+      "reviews": 3,
+      "images": [
+        "/images/products/poise-bra-grape-tim-1.webp",
+        "/images/products/poise-bra-grape-tim-2.webp",
+        "/images/products/poise-bra-grape-tim-3.webp"
+      ],
+      "colors": ["rgb(111, 45, 168)", "rgb(72, 60, 50)", "rgb(0, 0, 0)"],
+      "badge": null
+    },
+    {
+      "slug": "poise-leggings-grape-tim",
+      "name": "Poise Leggings - Tím",
+      "category": "Tím",
+      "price": 650000,
+      "compareAt": null,
+      "rating": 4.7,
+      "reviews": 3,
+      "images": [
+        "/images/products/poise-leggings-grape-tim-1.webp",
+        "/images/products/poise-leggings-grape-tim-2.webp",
+        "/images/products/poise-leggings-grape-tim-3.webp"
+      ],
+      "colors": ["rgb(111, 45, 168)", "rgb(72, 60, 50)", "rgb(0, 0, 0)"],
+      "badge": null
+    },
+    {
+      "slug": "flow-bra-sand-nau",
+      "name": "Flow Bra - Nâu",
+      "category": "Nâu",
+      "price": 500000,
+      "compareAt": null,
+      "rating": 4.5,
+      "reviews": 4,
+      "images": [
+        "/images/products/flow-bra-sand-nau-1.webp",
+        "/images/products/flow-bra-sand-nau-2.webp",
+        "/images/products/flow-bra-sand-nau-3.webp"
+      ],
+      "colors": ["rgb(194, 178, 128)", "rgb(220, 38, 38)"],
+      "badge": null
+    },
+    {
+      "slug": "flow-shorts-sand-nau",
+      "name": "Flow Shorts - Nâu",
+      "category": "Nâu",
+      "price": 550000,
+      "compareAt": null,
+      "rating": 4.7,
+      "reviews": 3,
+      "images": [
+        "/images/products/flow-shorts-sand-nau-1.webp",
+        "/images/products/flow-shorts-sand-nau-2.webp",
+        "/images/products/flow-shorts-sand-nau-3.webp"
+      ],
+      "colors": ["rgb(194, 178, 128)", "rgb(220, 38, 38)"],
+      "badge": null
+    },
+    {
+      "slug": "flow-bra-red-do",
+      "name": "Flow Bra - Đỏ",
+      "category": "Đỏ",
+      "price": 500000,
+      "compareAt": null,
+      "rating": 4.7,
+      "reviews": 3,
+      "images": [
+        "/images/products/flow-bra-red-do-1.webp",
+        "/images/products/flow-bra-red-do-2.webp",
+        "/images/products/flow-bra-red-do-3.webp"
+      ],
+      "colors": ["rgb(220, 38, 38)", "rgb(194, 178, 128)"],
+      "badge": null
+    },
+    {
+      "slug": "flow-shorts-red-do",
+      "name": "Flow Shorts - Đỏ",
+      "category": "Đỏ",
+      "price": 550000,
+      "compareAt": null,
+      "rating": 4.7,
+      "reviews": 3,
+      "images": [
+        "/images/products/flow-shorts-red-do-1.webp",
+        "/images/products/flow-shorts-red-do-2.webp",
+        "/images/products/flow-shorts-red-do-3.webp"
+      ],
+      "colors": ["rgb(220, 38, 38)", "rgb(194, 178, 128)"],
+      "badge": null
+    },
+    {
+      "slug": "muse-bra-black-den",
+      "name": "Muse Bra - Đen",
+      "category": "Đen",
+      "price": 500000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": ["/images/products/muse-bra-black-den-1.jpg"],
+      "colors": ["rgb(0, 0, 0)", "rgb(255, 255, 255)"],
+      "badge": null
+    },
+    {
+      "slug": "muse-skirts-black-den",
+      "name": "Muse Skirts - Đen",
+      "category": "Đen",
+      "price": 550000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": ["/images/products/muse-skirts-black-den-1.jpg"],
+      "colors": ["rgb(0, 0, 0)", "rgb(27, 42, 74)", "rgb(255, 255, 255)"],
+      "badge": null
+    },
+    {
+      "slug": "muse-skirts-navy-xanh-navy",
+      "name": "Muse Skirts - Xanh Navy",
+      "category": "Xanh Navy",
+      "price": 550000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": ["/images/products/muse-skirts-navy-xanh-navy-1.jpg"],
+      "colors": ["rgb(27, 42, 74)", "rgb(0, 0, 0)", "rgb(255, 255, 255)"],
+      "badge": null
+    },
+    {
+      "slug": "muse-bra-white-trang",
+      "name": "Muse Bra - Trắng",
+      "category": "Trắng",
+      "price": 500000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": ["/images/products/muse-bra-white-trang-1.jpg"],
+      "colors": ["rgb(255, 255, 255)", "rgb(0, 0, 0)"],
+      "badge": null
+    },
+    {
+      "slug": "muse-skirts-white-trang",
+      "name": "Muse Skirts - Trắng",
+      "category": "Trắng",
+      "price": 550000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": ["/images/products/muse-skirts-white-trang-1.jpg"],
+      "colors": ["rgb(255, 255, 255)", "rgb(0, 0, 0)", "rgb(27, 42, 74)"],
+      "badge": null
+    },
+    {
+      "slug": "layer-pink-hong",
+      "name": "Layer - Hồng",
+      "category": "Hồng",
+      "price": 550000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/layer-pink-hong-1.jpg",
+        "/images/products/layer-pink-hong-2.webp",
+        "/images/products/layer-pink-hong-3.webp"
+      ],
+      "colors": ["rgb(255, 182, 193)", "rgb(255, 255, 255)", "rgb(0, 0, 0)"],
+      "badge": null
+    },
+    {
+      "slug": "layer-white",
+      "name": "Layer - Trắng",
+      "category": "Trắng",
+      "price": 550000,
+      "compareAt": null,
+      "rating": 5,
+      "reviews": 4,
+      "images": [
+        "/images/products/layer-white-1.jpg",
+        "/images/products/layer-white-2.jpg",
+        "/images/products/layer-white-3.jpg"
+      ],
+      "colors": ["rgb(255, 255, 255)", "rgb(255, 182, 193)", "rgb(0, 0, 0)"],
+      "badge": null
+    },
+    {
+      "slug": "layer-black",
+      "name": "Layer - Đen",
+      "category": "Đen",
+      "price": 550000,
+      "compareAt": null,
+      "rating": 5,
+      "reviews": 3,
+      "images": [
+        "/images/products/layer-black-1.jpg",
+        "/images/products/layer-black-2.jpg",
+        "/images/products/layer-black-3.jpg"
+      ],
+      "colors": ["rgb(0, 0, 0)", "rgb(255, 182, 193)", "rgb(255, 255, 255)"],
+      "badge": null
+    },
+    {
+      "slug": "balance-bra-bumblebee",
+      "name": "Balance Bra - Vàng",
+      "category": "Vàng",
+      "price": 500000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/balance-bra-bumblebee-1.jpg",
+        "/images/products/balance-bra-bumblebee-2.jpg",
+        "/images/products/balance-bra-bumblebee-3.jpg"
+      ],
+      "colors": [
+        "rgb(255, 193, 37)",
+        "rgb(210, 180, 140)",
+        "rgb(110, 127, 128)"
+      ],
+      "badge": null
+    },
+    {
+      "slug": "balance-leggings-bumblebee",
+      "name": "Balance Leggings - Vàng",
+      "category": "Vàng",
+      "price": 650000,
+      "compareAt": null,
+      "rating": 4.1,
+      "reviews": 7,
+      "images": [
+        "/images/products/balance-leggings-bumblebee-1.webp",
+        "/images/products/balance-leggings-bumblebee-2.webp",
+        "/images/products/balance-leggings-bumblebee-3.webp"
+      ],
+      "colors": [
+        "rgb(255, 193, 37)",
+        "rgb(110, 127, 128)",
+        "rgb(210, 180, 140)"
+      ],
+      "badge": null
+    },
+    {
+      "slug": "balance-leggings-blue-grey",
+      "name": "Balance Leggings - Xanh Xám",
+      "category": "Xanh Xám",
+      "price": 650000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/balance-leggings-blue-grey-1.webp",
+        "/images/products/balance-leggings-blue-grey-2.webp",
+        "/images/products/balance-leggings-blue-grey-3.webp"
+      ],
+      "colors": [
+        "rgb(110, 127, 128)",
+        "rgb(255, 193, 37)",
+        "rgb(210, 180, 140)"
+      ],
+      "badge": null
+    },
+    {
+      "slug": "balance-bra-tan",
+      "name": "Balance Bra - Nâu Kem",
+      "category": "Nâu Kem",
+      "price": 500000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/balance-bra-tan-1.webp",
+        "/images/products/balance-bra-tan-2.webp",
+        "/images/products/balance-bra-tan-3.jpg"
+      ],
+      "colors": [
+        "rgb(210, 180, 140)",
+        "rgb(255, 193, 37)",
+        "rgb(110, 127, 128)"
+      ],
+      "badge": null
+    },
+    {
+      "slug": "balance-leggings-tan",
+      "name": "Balance Leggings - Nâu Kem",
+      "category": "Nâu Kem",
+      "price": 650000,
+      "compareAt": null,
+      "rating": 4.5,
+      "reviews": 4,
+      "images": [
+        "/images/products/balance-leggings-tan-1.webp",
+        "/images/products/balance-leggings-tan-2.webp",
+        "/images/products/balance-leggings-tan-3.webp"
+      ],
+      "colors": [
+        "rgb(210, 180, 140)",
+        "rgb(255, 193, 37)",
+        "rgb(110, 127, 128)"
+      ],
+      "badge": null
+    },
+    {
+      "slug": "femme-long-bra-cream",
+      "name": "Femme Long Bra - Trắng Kem",
+      "category": "Trắng Kem",
+      "price": 500000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/femme-long-bra-cream-1.webp",
+        "/images/products/femme-long-bra-cream-2.webp",
+        "/images/products/femme-long-bra-cream-3.webp"
+      ],
+      "colors": ["rgb(255, 253, 208)", "rgb(0, 0, 0)", "rgb(27, 42, 74)"],
+      "badge": null
+    },
+    {
+      "slug": "femme-long-leggings-cream",
+      "name": "Femme Long Leggings - Trắng Kem",
+      "category": "Trắng Kem",
+      "price": 650000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/femme-long-leggings-cream-1.webp",
+        "/images/products/femme-long-leggings-cream-2.webp",
+        "/images/products/femme-long-leggings-cream-3.webp"
+      ],
+      "colors": ["rgb(255, 253, 208)", "rgb(0, 0, 0)", "rgb(27, 42, 74)"],
+      "badge": null
+    },
+    {
+      "slug": "femme-long-bra-black",
+      "name": "Femme Long Bra - Đen",
+      "category": "Đen",
+      "price": 500000,
+      "compareAt": null,
+      "rating": 4.3,
+      "reviews": 3,
+      "images": [
+        "/images/products/femme-long-bra-black-1.webp",
+        "/images/products/femme-long-bra-black-2.webp",
+        "/images/products/femme-long-bra-black-3.webp"
+      ],
+      "colors": ["rgb(0, 0, 0)", "rgb(255, 253, 208)", "rgb(27, 42, 74)"],
+      "badge": null
+    },
+    {
+      "slug": "femme-long-leggings-black",
+      "name": "Femme Long Leggings - Đen",
+      "category": "Đen",
+      "price": 650000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/femme-long-leggings-black-1.webp",
+        "/images/products/femme-long-leggings-black-2.webp",
+        "/images/products/femme-long-leggings-black-3.webp"
+      ],
+      "colors": ["rgb(0, 0, 0)", "rgb(255, 253, 208)", "rgb(27, 42, 74)"],
+      "badge": null
+    },
+    {
+      "slug": "femme-long-bra-navy",
+      "name": "Femme Long Bra - Xanh Navy",
+      "category": "Xanh Navy",
+      "price": 500000,
+      "compareAt": null,
+      "rating": 4.4,
+      "reviews": 5,
+      "images": ["/images/products/femme-long-bra-navy-1.jpg"],
+      "colors": ["rgb(27, 42, 74)", "rgb(255, 253, 208)", "rgb(0, 0, 0)"],
+      "badge": null
+    },
+    {
+      "slug": "femme-long-leggings-navy",
+      "name": "Femme Long Leggings - Xanh Navy",
+      "category": "Xanh Navy",
+      "price": 650000,
+      "compareAt": null,
+      "rating": 4.6,
+      "reviews": 7,
+      "images": ["/images/products/femme-long-leggings-navy-1.jpg"],
+      "colors": ["rgb(27, 42, 74)", "rgb(255, 253, 208)", "rgb(0, 0, 0)"],
+      "badge": null
+    },
+    {
+      "slug": "courtney-bra-cobalt",
+      "name": "Courtney Bra - Xanh Coban Đậm",
+      "category": "Xanh Coban Đậm",
+      "price": 500000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/courtney-bra-cobalt-1.webp",
+        "/images/products/courtney-bra-cobalt-2.jpg",
+        "/images/products/courtney-bra-cobalt-3.jpg"
+      ],
+      "colors": ["rgb(0, 71, 171)", "rgb(152, 255, 152)"],
+      "badge": null
+    },
+    {
+      "slug": "courtney-skirts-cobalt",
+      "name": "Courtney Skirts - Xanh Coban Đậm",
+      "category": "Xanh Coban Đậm",
+      "price": 550000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/courtney-skirts-cobalt-1.webp",
+        "/images/products/courtney-skirts-cobalt-2.jpg",
+        "/images/products/courtney-skirts-cobalt-3.jpg"
+      ],
+      "colors": ["rgb(0, 71, 171)", "rgb(0, 0, 0)", "rgb(152, 255, 152)"],
+      "badge": null
+    },
+    {
+      "slug": "courtney-skirts-black",
+      "name": "Courtney Skirts - Đen",
+      "category": "Đen",
+      "price": 550000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/courtney-skirts-black-1.webp",
+        "/images/products/courtney-skirts-black-2.webp",
+        "/images/products/courtney-skirts-black-3.webp"
+      ],
+      "colors": ["rgb(0, 0, 0)", "rgb(0, 71, 171)", "rgb(152, 255, 152)"],
+      "badge": null
+    },
+    {
+      "slug": "courtney-bra-mint",
+      "name": "Courtney Bra - Xanh Lá",
+      "category": "Xanh Lá",
+      "price": 500000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/courtney-bra-mint-1.webp",
+        "/images/products/courtney-bra-mint-2.webp",
+        "/images/products/courtney-bra-mint-3.webp"
+      ],
+      "colors": ["rgb(152, 255, 152)", "rgb(0, 71, 171)"],
+      "badge": null
+    },
+    {
+      "slug": "courtney-skirts-mint",
+      "name": "Courtney Skirts - Xanh Lá",
+      "category": "Xanh Lá",
+      "price": 550000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/courtney-skirts-mint-1.webp",
+        "/images/products/courtney-skirts-mint-2.webp",
+        "/images/products/courtney-skirts-mint-3.webp"
+      ],
+      "colors": ["rgb(152, 255, 152)", "rgb(0, 71, 171)", "rgb(0, 0, 0)"],
+      "badge": null
+    },
+    {
+      "slug": "monaco-skorts-lemon",
+      "name": "The Monaco Skorts - Vàng Chanh",
+      "category": "Vàng Chanh",
+      "price": 550000,
+      "compareAt": null,
+      "rating": 4.5,
+      "reviews": 4,
+      "images": [
+        "/images/products/monaco-skorts-lemon-1.webp",
+        "/images/products/monaco-skorts-lemon-2.webp",
+        "/images/products/monaco-skorts-lemon-3.webp"
+      ],
+      "colors": [
+        "rgb(252, 238, 145)",
+        "rgb(91, 168, 200)",
+        "rgb(245, 164, 181)",
+        "rgb(74, 55, 40)",
+        "rgb(0, 0, 0)"
+      ],
+      "badge": null
+    },
+    {
+      "slug": "monaco-bra-blueberry",
+      "name": "The Monaco Top - Xanh Dương",
+      "category": "Xanh Dương",
+      "price": 500000,
+      "compareAt": null,
+      "rating": 4.8,
+      "reviews": 4,
+      "images": [
+        "/images/products/monaco-bra-blueberry-1.webp",
+        "/images/products/monaco-bra-blueberry-2.webp",
+        "/images/products/monaco-bra-blueberry-3.webp"
+      ],
+      "colors": [
+        "rgb(91, 168, 200)",
+        "rgb(245, 164, 181)",
+        "rgb(74, 55, 40)",
+        "rgb(0, 0, 0)",
+        "rgb(252, 238, 145)"
+      ],
+      "badge": null
+    },
+    {
+      "slug": "monaco-skorts-blueberry",
+      "name": "The Monaco Skorts - Xanh Dương",
+      "category": "Xanh Dương",
+      "price": 550000,
+      "compareAt": null,
+      "rating": 4.7,
+      "reviews": 3,
+      "images": [
+        "/images/products/monaco-skorts-blueberry-1.webp",
+        "/images/products/monaco-skorts-blueberry-2.webp",
+        "/images/products/monaco-skorts-blueberry-3.webp"
+      ],
+      "colors": [
+        "rgb(91, 168, 200)",
+        "rgb(252, 238, 145)",
+        "rgb(245, 164, 181)",
+        "rgb(74, 55, 40)",
+        "rgb(0, 0, 0)"
+      ],
+      "badge": null
+    },
+    {
+      "slug": "monaco-bra-strawberry-pink",
+      "name": "The Monaco Top - Hồng",
+      "category": "Hồng",
+      "price": 500000,
+      "compareAt": null,
+      "rating": 4.8,
+      "reviews": 4,
+      "images": [
+        "/images/products/monaco-bra-strawberry-pink-1.webp",
+        "/images/products/monaco-bra-strawberry-pink-2.webp",
+        "/images/products/monaco-bra-strawberry-pink-3.webp"
+      ],
+      "colors": [
+        "rgb(245, 164, 181)",
+        "rgb(91, 168, 200)",
+        "rgb(74, 55, 40)",
+        "rgb(0, 0, 0)",
+        "rgb(252, 238, 145)"
+      ],
+      "badge": null
+    },
+    {
+      "slug": "monaco-skorts-strawberry-pink",
+      "name": "The Monaco Skorts - Hồng",
+      "category": "Hồng",
+      "price": 550000,
+      "compareAt": null,
+      "rating": 4.7,
+      "reviews": 3,
+      "images": [
+        "/images/products/monaco-skorts-strawberry-pink-1.webp",
+        "/images/products/monaco-skorts-strawberry-pink-2.webp",
+        "/images/products/monaco-skorts-strawberry-pink-3.webp"
+      ],
+      "colors": [
+        "rgb(245, 164, 181)",
+        "rgb(252, 238, 145)",
+        "rgb(91, 168, 200)",
+        "rgb(74, 55, 40)",
+        "rgb(0, 0, 0)"
+      ],
+      "badge": null
+    },
+    {
+      "slug": "monaco-bra-espresso",
+      "name": "The Monaco Top - Nâu",
+      "category": "Nâu",
+      "price": 500000,
+      "compareAt": null,
+      "rating": 4.1,
+      "reviews": 7,
+      "images": [
+        "/images/products/monaco-bra-espresso-1.jpg",
+        "/images/products/monaco-bra-espresso-2.jpg",
+        "/images/products/monaco-bra-espresso-3.jpg"
+      ],
+      "colors": [
+        "rgb(74, 55, 40)",
+        "rgb(91, 168, 200)",
+        "rgb(245, 164, 181)",
+        "rgb(0, 0, 0)",
+        "rgb(252, 238, 145)"
+      ],
+      "badge": null
+    },
+    {
+      "slug": "monaco-skorts-espresso",
+      "name": "The Monaco Skorts - Nâu",
+      "category": "Nâu",
+      "price": 550000,
+      "compareAt": null,
+      "rating": 5,
+      "reviews": 4,
+      "images": [
+        "/images/products/monaco-skorts-espresso-1.jpg",
+        "/images/products/monaco-skorts-espresso-2.jpg",
+        "/images/products/monaco-skorts-espresso-3.jpg"
+      ],
+      "colors": [
+        "rgb(74, 55, 40)",
+        "rgb(252, 238, 145)",
+        "rgb(91, 168, 200)",
+        "rgb(245, 164, 181)",
+        "rgb(0, 0, 0)"
+      ],
+      "badge": null
+    },
+    {
+      "slug": "monaco-bra-black",
+      "name": "The Monaco Top - Đen",
+      "category": "Đen",
+      "price": 500000,
+      "compareAt": null,
+      "rating": 4.2,
+      "reviews": 6,
+      "images": [
+        "/images/products/monaco-bra-black-1.jpg",
+        "/images/products/monaco-bra-black-2.jpg",
+        "/images/products/monaco-bra-black-3.jpg"
+      ],
+      "colors": [
+        "rgb(0, 0, 0)",
+        "rgb(91, 168, 200)",
+        "rgb(245, 164, 181)",
+        "rgb(74, 55, 40)",
+        "rgb(252, 238, 145)"
+      ],
+      "badge": null
+    },
+    {
+      "slug": "monaco-skorts-black",
+      "name": "The Monaco Skorts - Đen",
+      "category": "Đen",
+      "price": 550000,
+      "compareAt": null,
+      "rating": 5,
+      "reviews": 2,
+      "images": [
+        "/images/products/monaco-skorts-black-1.jpg",
+        "/images/products/monaco-skorts-black-2.jpg",
+        "/images/products/monaco-skorts-black-3.jpg"
+      ],
+      "colors": [
+        "rgb(0, 0, 0)",
+        "rgb(252, 238, 145)",
+        "rgb(91, 168, 200)",
+        "rgb(245, 164, 181)",
+        "rgb(74, 55, 40)"
+      ],
+      "badge": null
+    },
+    {
+      "slug": "elite-bra-white",
+      "name": "Elite Bra - Trắng",
+      "category": "Trắng",
+      "price": 500000,
+      "compareAt": null,
+      "rating": 5,
+      "reviews": 4,
+      "images": [
+        "/images/products/elite-bra-white-1.jpg",
+        "/images/products/elite-bra-white-2.jpg",
+        "/images/products/elite-bra-white-3.jpg"
+      ],
+      "colors": ["rgb(255, 255, 255)", "rgb(27, 42, 74)", "rgb(155, 17, 30)"],
+      "badge": null
+    },
+    {
+      "slug": "elite-skorts-white",
+      "name": "Elite Skorts - Trắng",
+      "category": "Trắng",
+      "price": 550000,
+      "compareAt": null,
+      "rating": 5,
+      "reviews": 1,
+      "images": [
+        "/images/products/elite-skorts-white-1.jpg",
+        "/images/products/elite-skorts-white-2.jpg",
+        "/images/products/elite-skorts-white-3.jpg"
+      ],
+      "colors": ["rgb(255, 255, 255)", "rgb(27, 42, 74)", "rgb(155, 17, 30)"],
+      "badge": null
+    },
+    {
+      "slug": "elite-bra-navy",
+      "name": "Elite Bra - Navy",
+      "category": "Navy",
+      "price": 500000,
+      "compareAt": null,
+      "rating": 5,
+      "reviews": 3,
+      "images": [
+        "/images/products/elite-bra-navy-1.jpg",
+        "/images/products/elite-bra-navy-2.jpg",
+        "/images/products/elite-bra-navy-3.jpg"
+      ],
+      "colors": ["rgb(27, 42, 74)", "rgb(255, 255, 255)", "rgb(155, 17, 30)"],
+      "badge": null
+    },
+    {
+      "slug": "elite-skorts-navy",
+      "name": "Elite Skorts - Navy",
+      "category": "Navy",
+      "price": 550000,
+      "compareAt": null,
+      "rating": 5,
+      "reviews": 2,
+      "images": [
+        "/images/products/elite-skorts-navy-1.webp",
+        "/images/products/elite-skorts-navy-2.jpg",
+        "/images/products/elite-skorts-navy-3.webp"
+      ],
+      "colors": ["rgb(27, 42, 74)", "rgb(255, 255, 255)", "rgb(155, 17, 30)"],
+      "badge": null
+    },
+    {
+      "slug": "elite-bra-ruby",
+      "name": "Elite Bra - Đỏ Ruby",
+      "category": "Đỏ Ruby",
+      "price": 500000,
+      "compareAt": null,
+      "rating": 5,
+      "reviews": 3,
+      "images": [
+        "/images/products/elite-bra-ruby-1.jpg",
+        "/images/products/elite-bra-ruby-2.jpg",
+        "/images/products/elite-bra-ruby-3.jpg"
+      ],
+      "colors": ["rgb(155, 17, 30)", "rgb(255, 255, 255)", "rgb(27, 42, 74)"],
+      "badge": null
+    },
+    {
+      "slug": "elite-skorts-ruby",
+      "name": "Elite Skorts - Đỏ Ruby",
+      "category": "Đỏ Ruby",
+      "price": 550000,
+      "compareAt": null,
+      "rating": 4.8,
+      "reviews": 4,
+      "images": [
+        "/images/products/elite-skorts-ruby-1.webp",
+        "/images/products/elite-skorts-ruby-2.webp",
+        "/images/products/elite-skorts-ruby-3.webp"
+      ],
+      "colors": ["rgb(155, 17, 30)", "rgb(255, 255, 255)", "rgb(27, 42, 74)"],
+      "badge": null
+    },
+    {
+      "slug": "aura-top-black",
+      "name": "Aura Top - Đen",
+      "category": "Đen",
+      "price": 500000,
+      "compareAt": null,
+      "rating": 4.3,
+      "reviews": 3,
+      "images": [
+        "/images/products/aura-top-black-1.webp",
+        "/images/products/aura-top-black-2.webp",
+        "/images/products/aura-top-black-3.webp"
+      ],
+      "colors": ["rgb(0, 0, 0)", "rgb(255, 248, 220)", "rgb(45, 90, 79)"],
+      "badge": null
+    },
+    {
+      "slug": "aura-skorts-black",
+      "name": "Aura Skorts - Đen",
+      "category": "Đen",
+      "price": 550000,
+      "compareAt": null,
+      "rating": 4.8,
+      "reviews": 4,
+      "images": [
+        "/images/products/aura-skorts-black-1.webp",
+        "/images/products/aura-skorts-black-2.webp",
+        "/images/products/aura-skorts-black-3.webp"
+      ],
+      "colors": ["rgb(0, 0, 0)", "rgb(255, 248, 220)", "rgb(45, 90, 79)"],
+      "badge": null
+    },
+    {
+      "slug": "aura-top-butter",
+      "name": "Aura Top - Vàng",
+      "category": "Vàng",
+      "price": 500000,
+      "compareAt": null,
+      "rating": 4.7,
+      "reviews": 3,
+      "images": [
+        "/images/products/aura-top-butter-1.webp",
+        "/images/products/aura-top-butter-2.webp",
+        "/images/products/aura-top-butter-3.webp"
+      ],
+      "colors": ["rgb(255, 248, 220)", "rgb(0, 0, 0)", "rgb(45, 90, 79)"],
+      "badge": null
+    },
+    {
+      "slug": "aura-skorts-butter",
+      "name": "Aura Skorts - Vàng",
+      "category": "Vàng",
+      "price": 550000,
+      "compareAt": null,
+      "rating": 4.7,
+      "reviews": 3,
+      "images": [
+        "/images/products/aura-skorts-butter-1.webp",
+        "/images/products/aura-skorts-butter-2.webp",
+        "/images/products/aura-skorts-butter-3.webp"
+      ],
+      "colors": ["rgb(255, 248, 220)", "rgb(0, 0, 0)", "rgb(45, 90, 79)"],
+      "badge": null
+    },
+    {
+      "slug": "aura-top-pine",
+      "name": "Aura Top - Xanh Cổ Vịt",
+      "category": "Xanh Cổ Vịt",
+      "price": 500000,
+      "compareAt": null,
+      "rating": 4.8,
+      "reviews": 4,
+      "images": [
+        "/images/products/aura-top-pine-1.jpg",
+        "/images/products/aura-top-pine-2.jpg",
+        "/images/products/aura-top-pine-3.jpg"
+      ],
+      "colors": ["rgb(45, 90, 79)", "rgb(0, 0, 0)", "rgb(255, 248, 220)"],
+      "badge": null
+    },
+    {
+      "slug": "aura-skorts-pine",
+      "name": "Aura Skorts - Xanh Cổ Vịt",
+      "category": "Xanh Cổ Vịt",
+      "price": 550000,
+      "compareAt": null,
+      "rating": 4.8,
+      "reviews": 4,
+      "images": [
+        "/images/products/aura-skorts-pine-1.jpg",
+        "/images/products/aura-skorts-pine-2.jpg",
+        "/images/products/aura-skorts-pine-3.jpg"
+      ],
+      "colors": ["rgb(45, 90, 79)", "rgb(0, 0, 0)", "rgb(255, 248, 220)"],
+      "badge": null
+    },
+    {
+      "slug": "aura-plum-skorts",
+      "name": "Aura - Plum (Tím) - Chân Váy",
+      "category": "Chân Váy",
+      "price": 550000,
+      "compareAt": null,
+      "rating": 4.6,
+      "reviews": 5,
+      "images": [
+        "/images/products/aura-plum-skorts-1.webp",
+        "/images/products/aura-plum-skorts-2.webp",
+        "/images/products/aura-plum-skorts-3.webp"
+      ],
+      "colors": ["rgb(142, 69, 133)", "rgb(204, 204, 204)"],
+      "badge": null
+    },
+    {
+      "slug": "aura-plum",
+      "name": "Aura Set - Tím",
+      "category": "Tím",
+      "price": 850000,
+      "compareAt": null,
+      "rating": 5,
+      "reviews": 3,
+      "images": ["/images/products/aura-plum-1.jpg"],
+      "colors": ["rgb(142, 69, 133)", "rgb(204, 204, 204)"],
+      "badge": null
+    },
+    {
+      "slug": "aura-plum-top",
+      "name": "Aura - Plum (Tím) - Áo",
+      "category": "Áo",
+      "price": 500000,
+      "compareAt": null,
+      "rating": 4.8,
+      "reviews": 4,
+      "images": [
+        "/images/products/aura-plum-top-1.webp",
+        "/images/products/aura-plum-top-2.webp",
+        "/images/products/aura-plum-top-3.webp"
+      ],
+      "colors": ["rgb(204, 204, 204)", "rgb(142, 69, 133)"],
+      "badge": null
+    },
+    {
+      "slug": "whisper-shorts-cream",
+      "name": "Whisper Shorts - Trắng Kem",
+      "category": "Trắng Kem",
+      "price": 550000,
+      "compareAt": null,
+      "rating": 4.3,
+      "reviews": 3,
+      "images": [
+        "/images/products/whisper-shorts-cream-1.webp",
+        "/images/products/whisper-shorts-cream-2.webp",
+        "/images/products/whisper-shorts-cream-3.webp"
+      ],
+      "colors": ["rgb(255, 253, 208)", "rgb(74, 44, 42)"],
+      "badge": null
+    },
+    {
+      "slug": "whisper-white-top",
+      "name": "Whisper - White (Trắng) - Áo",
+      "category": "Áo",
+      "price": 500000,
+      "compareAt": null,
+      "rating": 4.8,
+      "reviews": 4,
+      "images": [
+        "/images/products/whisper-white-top-1.webp",
+        "/images/products/whisper-white-top-2.webp",
+        "/images/products/whisper-white-top-3.webp"
+      ],
+      "colors": ["rgb(255, 255, 255)", "rgb(74, 44, 42)"],
+      "badge": null
+    },
+    {
+      "slug": "whisper-choco-top",
+      "name": "Whisper - Choco (Nâu) - Áo",
+      "category": "Áo",
+      "price": 500000,
+      "compareAt": null,
+      "rating": 5,
+      "reviews": 5,
+      "images": [
+        "/images/products/whisper-choco-top-1.webp",
+        "/images/products/whisper-choco-top-2.webp",
+        "/images/products/whisper-choco-top-3.webp"
+      ],
+      "colors": ["rgb(74, 44, 42)", "rgb(255, 255, 255)"],
+      "badge": null
+    },
+    {
+      "slug": "whisper-shorts-choco",
+      "name": "Whisper Shorts - Nâu",
+      "category": "Nâu",
+      "price": 550000,
+      "compareAt": null,
+      "rating": 4.3,
+      "reviews": 3,
+      "images": [
+        "/images/products/whisper-shorts-choco-1.webp",
+        "/images/products/whisper-shorts-choco-2.webp",
+        "/images/products/whisper-shorts-choco-3.webp"
+      ],
+      "colors": ["rgb(74, 44, 42)", "rgb(255, 253, 208)"],
+      "badge": null
+    },
+    {
+      "slug": "mut-dem-nguc-cho-ao-sport-bra-ao-tap-gym-yoga-1-cap",
+      "name": "Mút Đệm Ngực Cho Áo Sport Bra, Áo Tập Gym, Yoga - 1 cặp",
+      "category": "1 cặp",
+      "price": 30000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/mut-dem-nguc-cho-ao-sport-bra-ao-tap-gym-yoga-1-cap-1.jpg"
+      ],
+      "colors": [],
+      "badge": null
+    },
+    {
+      "slug": "recharge-20-pink-top",
+      "name": "Recharge 2.0 - Pink (Hồng) - Áo",
+      "category": "Áo",
+      "price": 500000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/recharge-20-pink-top-1.jpg",
+        "/images/products/recharge-20-pink-top-2.jpg",
+        "/images/products/recharge-20-pink-top-3.jpg"
+      ],
+      "colors": ["rgb(255, 182, 193)", "rgb(0, 0, 0)", "rgb(195, 176, 145)"],
+      "badge": null
+    },
+    {
+      "slug": "recharge-20-pink-leggings",
+      "name": "Recharge 2.0 - Pink (Hồng) - Quần",
+      "category": "Quần",
+      "price": 650000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/recharge-20-pink-leggings-1.jpg",
+        "/images/products/recharge-20-pink-leggings-2.jpg",
+        "/images/products/recharge-20-pink-leggings-3.jpg"
+      ],
+      "colors": ["rgb(255, 182, 193)", "rgb(0, 0, 0)", "rgb(195, 176, 145)"],
+      "badge": null
+    },
+    {
+      "slug": "recharge-20-black",
+      "name": "Recharge 2.0 Set - Đen",
+      "category": "Đen",
+      "price": 1150000,
+      "compareAt": null,
+      "rating": 5,
+      "reviews": 5,
+      "images": [
+        "/images/products/recharge-20-black-1.jpg",
+        "/images/products/recharge-20-black-2.jpg",
+        "/images/products/recharge-20-black-3.jpg"
+      ],
+      "colors": ["rgb(0, 0, 0)", "rgb(255, 182, 193)", "rgb(195, 176, 145)"],
+      "badge": null
+    },
+    {
+      "slug": "recharge-20-kaki",
+      "name": "Recharge 2.0 Set - Nâu Kaki",
+      "category": "Nâu Kaki",
+      "price": 1150000,
+      "compareAt": null,
+      "rating": 5,
+      "reviews": 2,
+      "images": [
+        "/images/products/recharge-20-kaki-1.jpg",
+        "/images/products/recharge-20-kaki-2.jpg",
+        "/images/products/recharge-20-kaki-3.jpg"
+      ],
+      "colors": ["rgb(195, 176, 145)", "rgb(255, 182, 193)", "rgb(0, 0, 0)"],
+      "badge": null
+    },
+    {
+      "slug": "quan-grace-purple",
+      "name": "Quần Grace - Tím",
+      "category": "Tím",
+      "price": 650000,
+      "compareAt": null,
+      "rating": 4.7,
+      "reviews": 3,
+      "images": [
+        "/images/products/quan-grace-purple-1.webp",
+        "/images/products/quan-grace-purple-2.jpg",
+        "/images/products/quan-grace-purple-3.webp"
+      ],
+      "colors": [
+        "rgb(107, 63, 160)",
+        "rgb(137, 207, 240)",
+        "rgb(244, 194, 194)"
+      ],
+      "badge": null
+    },
+    {
+      "slug": "quan-grace-baby-blue",
+      "name": "Quần Grace - Xanh Baby",
+      "category": "Xanh Baby",
+      "price": 650000,
+      "compareAt": null,
+      "rating": 4.7,
+      "reviews": 3,
+      "images": [
+        "/images/products/quan-grace-baby-blue-1.jpg",
+        "/images/products/quan-grace-baby-blue-2.webp",
+        "/images/products/quan-grace-baby-blue-3.webp"
+      ],
+      "colors": [
+        "rgb(137, 207, 240)",
+        "rgb(107, 63, 160)",
+        "rgb(244, 194, 194)"
+      ],
+      "badge": null
+    },
+    {
+      "slug": "quan-grace-baby-pink",
+      "name": "Quần Grace - Hồng Baby",
+      "category": "Hồng Baby",
+      "price": 650000,
+      "compareAt": null,
+      "rating": 4.5,
+      "reviews": 4,
+      "images": [
+        "/images/products/quan-grace-baby-pink-1.jpg",
+        "/images/products/quan-grace-baby-pink-2.webp",
+        "/images/products/quan-grace-baby-pink-3.webp"
+      ],
+      "colors": [
+        "rgb(244, 194, 194)",
+        "rgb(107, 63, 160)",
+        "rgb(137, 207, 240)"
+      ],
+      "badge": null
+    },
+    {
+      "slug": "ao-bra-grace-purple",
+      "name": "Áo Bra Grace - Tím",
+      "category": "Tím",
+      "price": 500000,
+      "compareAt": null,
+      "rating": 4.7,
+      "reviews": 3,
+      "images": [
+        "/images/products/ao-bra-grace-purple-1.webp",
+        "/images/products/ao-bra-grace-purple-2.webp",
+        "/images/products/ao-bra-grace-purple-3.webp"
+      ],
+      "colors": [
+        "rgb(107, 63, 160)",
+        "rgb(244, 194, 194)",
+        "rgb(137, 207, 240)"
+      ],
+      "badge": null
+    },
+    {
+      "slug": "ao-bra-grace-baby-pink",
+      "name": "Áo Bra Grace - Hồng Baby",
+      "category": "Hồng Baby",
+      "price": 500000,
+      "compareAt": null,
+      "rating": 4.5,
+      "reviews": 4,
+      "images": [
+        "/images/products/ao-bra-grace-baby-pink-1.jpg",
+        "/images/products/ao-bra-grace-baby-pink-2.webp",
+        "/images/products/ao-bra-grace-baby-pink-3.webp"
+      ],
+      "colors": [
+        "rgb(244, 194, 194)",
+        "rgb(107, 63, 160)",
+        "rgb(137, 207, 240)"
+      ],
+      "badge": null
+    },
+    {
+      "slug": "ao-bra-grace-baby-blue",
+      "name": "Áo Bra Grace - Xanh Baby",
+      "category": "Xanh Baby",
+      "price": 500000,
+      "compareAt": null,
+      "rating": 4.8,
+      "reviews": 4,
+      "images": [
+        "/images/products/ao-bra-grace-baby-blue-1.webp",
+        "/images/products/ao-bra-grace-baby-blue-2.jpg",
+        "/images/products/ao-bra-grace-baby-blue-3.webp"
+      ],
+      "colors": [
+        "rgb(137, 207, 240)",
+        "rgb(107, 63, 160)",
+        "rgb(244, 194, 194)"
+      ],
+      "badge": null
+    },
+    {
+      "slug": "focus-30-pastel-green",
+      "name": "Focus 3.0 Set - Xanh Pastel",
+      "category": "Xanh Pastel",
+      "price": 950000,
+      "compareAt": null,
+      "rating": 5,
+      "reviews": 2,
+      "images": [
+        "/images/products/focus-30-pastel-green-1.jpg",
+        "/images/products/focus-30-pastel-green-2.jpg",
+        "/images/products/focus-30-pastel-green-3.jpg"
+      ],
+      "colors": ["rgb(182, 226, 199)", "rgb(92, 51, 23)"],
+      "badge": null
+    },
+    {
+      "slug": "form-bra-raisin-tim-dam",
+      "name": "Form Bra - Tím Đậm",
+      "category": "Tím Đậm",
+      "price": 500000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/form-bra-raisin-tim-dam-1.webp",
+        "/images/products/form-bra-raisin-tim-dam-2.webp",
+        "/images/products/form-bra-raisin-tim-dam-3.webp"
+      ],
+      "colors": [],
+      "badge": null
+    },
+    {
+      "slug": "form-leggings-raisin-tim-dam",
+      "name": "Form Leggings - Tím Đậm",
+      "category": "Tím Đậm",
+      "price": 650000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/form-leggings-raisin-tim-dam-1.webp",
+        "/images/products/form-leggings-raisin-tim-dam-2.webp",
+        "/images/products/form-leggings-raisin-tim-dam-3.webp"
+      ],
+      "colors": [],
+      "badge": null
+    },
+    {
+      "slug": "form-trang",
+      "name": "Form Set - Xám nhạt",
+      "category": "Xám nhạt",
+      "price": 950000,
+      "compareAt": null,
+      "rating": 5,
+      "reviews": 4,
+      "images": [
+        "/images/products/form-trang-1.jpg",
+        "/images/products/form-trang-2.jpg",
+        "/images/products/form-trang-3.jpg"
+      ],
+      "colors": [],
+      "badge": null
+    },
+    {
+      "slug": "perform-chocolate",
+      "name": "Perform Set - Nâu",
+      "category": "Nâu",
+      "price": 400000,
+      "compareAt": null,
+      "rating": 3.7,
+      "reviews": 3,
+      "images": [
+        "/images/products/perform-chocolate-1.png",
+        "/images/products/perform-chocolate-2.png",
+        "/images/products/perform-chocolate-3.png"
+      ],
+      "colors": [],
+      "badge": null
+    },
+    {
+      "slug": "inspire-visor-white",
+      "name": "Inspire Visor - Trắng",
+      "category": "Trắng",
+      "price": 300000,
+      "compareAt": null,
+      "rating": 4.3,
+      "reviews": 7,
+      "images": [
+        "/images/products/inspire-visor-white-1.jpg",
+        "/images/products/inspire-visor-white-2.jpg",
+        "/images/products/inspire-visor-white-3.jpg"
+      ],
+      "colors": ["rgb(255, 255, 255)", "rgb(255, 182, 193)", "rgb(0, 0, 0)"],
+      "badge": null
+    },
+    {
+      "slug": "inspire-visor-pink",
+      "name": "Inspire Visor - Hồng",
+      "category": "Hồng",
+      "price": 300000,
+      "compareAt": null,
+      "rating": 4.8,
+      "reviews": 4,
+      "images": [
+        "/images/products/inspire-visor-pink-1.jpg",
+        "/images/products/inspire-visor-pink-2.jpg",
+        "/images/products/inspire-visor-pink-3.jpg"
+      ],
+      "colors": ["rgb(255, 182, 193)", "rgb(255, 255, 255)", "rgb(0, 0, 0)"],
+      "badge": null
+    },
+    {
+      "slug": "slam-black",
+      "name": "Slam Set - Đen",
+      "category": "Đen",
+      "price": 1050000,
+      "compareAt": null,
+      "rating": 5,
+      "reviews": 3,
+      "images": [
+        "/images/products/slam-black-1.webp",
+        "/images/products/slam-black-2.webp",
+        "/images/products/slam-black-3.webp"
+      ],
+      "colors": [
+        "rgb(0, 0, 0)",
+        "rgb(194, 178, 128)",
+        "rgb(138, 154, 91)",
+        "rgb(30, 84, 183)"
+      ],
+      "badge": null
+    },
+    {
+      "slug": "slam-sand",
+      "name": "Slam Set - Nâu cát",
+      "category": "Nâu cát",
+      "price": 1050000,
+      "compareAt": null,
+      "rating": 5,
+      "reviews": 3,
+      "images": [
+        "/images/products/slam-sand-1.jpg",
+        "/images/products/slam-sand-2.jpg",
+        "/images/products/slam-sand-3.jpg"
+      ],
+      "colors": [
+        "rgb(194, 178, 128)",
+        "rgb(0, 0, 0)",
+        "rgb(138, 154, 91)",
+        "rgb(30, 84, 183)"
+      ],
+      "badge": null
+    },
+    {
+      "slug": "slam-moss",
+      "name": "Slam Set - Xanh Rêu",
+      "category": "Xanh Rêu",
+      "price": 1050000,
+      "compareAt": null,
+      "rating": 5,
+      "reviews": 3,
+      "images": [
+        "/images/products/slam-moss-1.webp",
+        "/images/products/slam-moss-2.webp",
+        "/images/products/slam-moss-3.webp"
+      ],
+      "colors": [
+        "rgb(138, 154, 91)",
+        "rgb(0, 0, 0)",
+        "rgb(194, 178, 128)",
+        "rgb(30, 84, 183)"
+      ],
+      "badge": null
+    },
+    {
+      "slug": "slam-blue",
+      "name": "Slam Set - Xanh Trời",
+      "category": "Xanh Trời",
+      "price": 1050000,
+      "compareAt": null,
+      "rating": 5,
+      "reviews": 3,
+      "images": [
+        "/images/products/slam-blue-1.webp",
+        "/images/products/slam-blue-2.webp",
+        "/images/products/slam-blue-3.webp"
+      ],
+      "colors": [
+        "rgb(30, 84, 183)",
+        "rgb(0, 0, 0)",
+        "rgb(194, 178, 128)",
+        "rgb(138, 154, 91)"
+      ],
+      "badge": null
+    },
+    {
+      "slug": "spin-lime",
+      "name": "Spin Set - Vàng Chanh",
+      "category": "Vàng Chanh",
+      "price": 800000,
+      "compareAt": null,
+      "rating": 5,
+      "reviews": 4,
+      "images": [
+        "/images/products/spin-lime-1.jpg",
+        "/images/products/spin-lime-2.jpg",
+        "/images/products/spin-lime-3.jpg"
+      ],
+      "colors": ["rgb(229, 229, 142)", "rgb(0, 0, 0)", "rgb(255, 194, 209)"],
+      "badge": null
+    },
+    {
+      "slug": "quan-flair-black",
+      "name": "Quần Flair - Đen",
+      "category": "Đen",
+      "price": 650000,
+      "compareAt": null,
+      "rating": 5,
+      "reviews": 2,
+      "images": [
+        "/images/products/quan-flair-black-1.jpg",
+        "/images/products/quan-flair-black-2.jpg",
+        "/images/products/quan-flair-black-3.jpg"
+      ],
+      "colors": [],
+      "badge": null
+    },
+    {
+      "slug": "game-navy",
+      "name": "Game Dress - Xanh Navy",
+      "category": "Xanh Navy",
+      "price": 850000,
+      "compareAt": null,
+      "rating": 5,
+      "reviews": 2,
+      "images": [
+        "/images/products/game-navy-1.webp",
+        "/images/products/game-navy-2.webp",
+        "/images/products/game-navy-3.webp"
+      ],
+      "colors": ["rgb(27, 42, 74)", "rgb(0, 0, 0)", "rgb(255, 255, 255)"],
+      "badge": null
+    },
+    {
+      "slug": "game-black",
+      "name": "Game Dress - Đen",
+      "category": "Đen",
+      "price": 850000,
+      "compareAt": null,
+      "rating": 5,
+      "reviews": 1,
+      "images": [
+        "/images/products/game-black-1.webp",
+        "/images/products/game-black-2.webp",
+        "/images/products/game-black-3.webp"
+      ],
+      "colors": ["rgb(0, 0, 0)", "rgb(27, 42, 74)", "rgb(255, 255, 255)"],
+      "badge": null
+    },
+    {
+      "slug": "game-white",
+      "name": "Game Dress - Trắng",
+      "category": "Trắng",
+      "price": 850000,
+      "compareAt": null,
+      "rating": 5,
+      "reviews": 5,
+      "images": [
+        "/images/products/game-white-1.webp",
+        "/images/products/game-white-2.webp",
+        "/images/products/game-white-3.webp"
+      ],
+      "colors": ["rgb(255, 255, 255)", "rgb(27, 42, 74)", "rgb(0, 0, 0)"],
+      "badge": null
+    },
+    {
+      "slug": "impulse-3-0-den",
+      "name": "Impulse 3.0 Set - Black (Đen) - Dài",
+      "category": "Dài",
+      "price": 950000,
+      "compareAt": null,
+      "rating": 5,
+      "reviews": 5,
+      "images": [
+        "/images/products/impulse-3-0-den-1.jpg",
+        "/images/products/impulse-3-0-den-2.jpg",
+        "/images/products/impulse-3-0-den-3.jpg"
+      ],
+      "colors": ["rgb(0, 0, 0)", "rgb(255, 105, 180)", "rgb(27, 42, 74)"],
+      "badge": null
+    },
+    {
+      "slug": "impulse-3-0-hong",
+      "name": "Impulse 3.0 Set - Hot Pink (Hồng) - Dài",
+      "category": "Dài",
+      "price": 950000,
+      "compareAt": null,
+      "rating": 5,
+      "reviews": 1,
+      "images": [
+        "/images/products/impulse-3-0-hong-1.jpg",
+        "/images/products/impulse-3-0-hong-2.jpg",
+        "/images/products/impulse-3-0-hong-3.jpg"
+      ],
+      "colors": ["rgb(255, 105, 180)", "rgb(0, 0, 0)", "rgb(27, 42, 74)"],
+      "badge": null
+    },
+    {
+      "slug": "femme-pullover-navy",
+      "name": "Femme Pullover - Xanh Navy",
+      "category": "Xanh Navy",
+      "price": 700000,
+      "compareAt": null,
+      "rating": 5,
+      "reviews": 3,
+      "images": [
+        "/images/products/femme-pullover-navy-1.jpg",
+        "/images/products/femme-pullover-navy-2.jpg",
+        "/images/products/femme-pullover-navy-3.jpg"
+      ],
+      "colors": ["rgb(27, 42, 74)", "rgb(0, 0, 0)"],
+      "badge": null
+    },
+    {
+      "slug": "femme-pants-navy",
+      "name": "Femme Pants - Xanh Navy",
+      "category": "Xanh Navy",
+      "price": 700000,
+      "compareAt": null,
+      "rating": 5,
+      "reviews": 2,
+      "images": [
+        "/images/products/femme-pants-navy-1.jpg",
+        "/images/products/femme-pants-navy-2.jpg",
+        "/images/products/femme-pants-navy-3.jpg"
+      ],
+      "colors": ["rgb(27, 42, 74)", "rgb(0, 0, 0)"],
+      "badge": null
+    },
+    {
+      "slug": "femme-bra-black",
+      "name": "Femme Bra - Đen",
+      "category": "Đen",
+      "price": 500000,
+      "compareAt": null,
+      "rating": 5,
+      "reviews": 2,
+      "images": [
+        "/images/products/femme-bra-black-1.jpg",
+        "/images/products/femme-bra-black-2.jpg",
+        "/images/products/femme-bra-black-3.jpg"
+      ],
+      "colors": ["rgb(0, 0, 0)", "rgb(255, 253, 208)"],
+      "badge": null
+    },
+    {
+      "slug": "femme-pullover-black",
+      "name": "Femme Pullover - Đen",
+      "category": "Đen",
+      "price": 700000,
+      "compareAt": null,
+      "rating": 4.2,
+      "reviews": 6,
+      "images": [
+        "/images/products/femme-pullover-black-1.png",
+        "/images/products/femme-pullover-black-2.png",
+        "/images/products/femme-pullover-black-3.png"
+      ],
+      "colors": ["rgb(0, 0, 0)", "rgb(27, 42, 74)"],
+      "badge": null
+    },
+    {
+      "slug": "femme-pants-black",
+      "name": "Femme Pants - Đen",
+      "category": "Đen",
+      "price": 700000,
+      "compareAt": null,
+      "rating": 5,
+      "reviews": 5,
+      "images": [
+        "/images/products/femme-pants-black-1.png",
+        "/images/products/femme-pants-black-2.png",
+        "/images/products/femme-pants-black-3.png"
+      ],
+      "colors": ["rgb(0, 0, 0)", "rgb(27, 42, 74)"],
+      "badge": null
+    },
+    {
+      "slug": "everyday-socks-tat-cao-co-eql-freesize",
+      "name": "Everyday Socks - Tất (Vớ) Cao Cổ EQL - Freesize",
+      "category": "Freesize",
+      "price": 120000,
+      "compareAt": null,
+      "rating": 4.8,
+      "reviews": 4,
+      "images": [
+        "/images/products/everyday-socks-tat-cao-co-eql-freesize-1.jpg",
+        "/images/products/everyday-socks-tat-cao-co-eql-freesize-2.jpg",
+        "/images/products/everyday-socks-tat-cao-co-eql-freesize-3.jpg"
+      ],
+      "colors": [],
+      "badge": null
+    },
+    {
+      "slug": "in-n-out-top-black",
+      "name": "In n Out Top - Đen",
+      "category": "Đen",
+      "price": 500000,
+      "compareAt": null,
+      "rating": 4.6,
+      "reviews": 5,
+      "images": [
+        "/images/products/in-n-out-top-black-1.jpg",
+        "/images/products/in-n-out-top-black-2.jpg",
+        "/images/products/in-n-out-top-black-3.jpg"
+      ],
+      "colors": [],
+      "badge": null
+    },
+    {
+      "slug": "snug-cream",
+      "name": "Snug - Trắng Kem",
+      "category": "Trắng Kem",
+      "price": 700000,
+      "compareAt": null,
+      "rating": 5,
+      "reviews": 4,
+      "images": [
+        "/images/products/snug-cream-1.jpg",
+        "/images/products/snug-cream-2.jpg",
+        "/images/products/snug-cream-3.jpg"
+      ],
+      "colors": ["rgb(255, 253, 208)", "rgb(74, 44, 42)"],
+      "badge": null
+    },
+    {
+      "slug": "snug-choco",
+      "name": "Snug - Nâu",
+      "category": "Nâu",
+      "price": 700000,
+      "compareAt": null,
+      "rating": 5,
+      "reviews": 4,
+      "images": [
+        "/images/products/snug-choco-1.jpg",
+        "/images/products/snug-choco-2.jpg",
+        "/images/products/snug-choco-3.jpg"
+      ],
+      "colors": ["rgb(74, 44, 42)", "rgb(255, 253, 208)"],
+      "badge": null
+    },
+    {
+      "slug": "ease-black",
+      "name": "Ease Set - Đen",
+      "category": "Đen",
+      "price": 1200000,
+      "compareAt": null,
+      "rating": 5,
+      "reviews": 4,
+      "images": [
+        "/images/products/ease-black-1.jpg",
+        "/images/products/ease-black-2.jpg",
+        "/images/products/ease-black-3.jpg"
+      ],
+      "colors": ["rgb(0, 0, 0)", "rgb(155, 17, 30)"],
+      "badge": null
+    },
+    {
+      "slug": "ease-ruby",
+      "name": "Ease Set - Đỏ Ruby",
+      "category": "Đỏ Ruby",
+      "price": 1200000,
+      "compareAt": null,
+      "rating": 5,
+      "reviews": 3,
+      "images": [
+        "/images/products/ease-ruby-1.jpg",
+        "/images/products/ease-ruby-2.jpg",
+        "/images/products/ease-ruby-3.jpg"
+      ],
+      "colors": ["rgb(155, 17, 30)", "rgb(0, 0, 0)"],
+      "badge": null
+    },
+    {
+      "slug": "celebre-halter-bra-snow",
+      "name": "Celebré Halter Bra - Trắng",
+      "category": "Trắng",
+      "price": 500000,
+      "compareAt": null,
+      "rating": null,
+      "reviews": 0,
+      "images": [
+        "/images/products/celebre-halter-bra-snow-1.webp",
+        "/images/products/celebre-halter-bra-snow-2.webp",
+        "/images/products/celebre-halter-bra-snow-3.webp"
+      ],
+      "colors": ["rgb(255, 250, 250)", "rgb(252, 90, 141)"],
+      "badge": null
+    },
+    {
+      "slug": "celebre-halter-bra-strawberry",
+      "name": "Celebré Halter Bra - Đỏ Dâu",
+      "category": "Đỏ Dâu",
+      "price": 500000,
+      "compareAt": null,
+      "rating": 5,
+      "reviews": 3,
+      "images": [
+        "/images/products/celebre-halter-bra-strawberry-1.jpg",
+        "/images/products/celebre-halter-bra-strawberry-2.jpg",
+        "/images/products/celebre-halter-bra-strawberry-3.jpg"
+      ],
+      "colors": ["rgb(252, 90, 141)", "rgb(255, 250, 250)"],
+      "badge": null
+    },
+    {
+      "slug": "everywear-cap-black-den",
+      "name": "Everywear Cap - Đen",
+      "category": "Đen",
+      "price": 300000,
+      "compareAt": null,
+      "rating": 4.8,
+      "reviews": 4,
+      "images": [
+        "/images/products/everywear-cap-black-den-1.jpg",
+        "/images/products/everywear-cap-black-den-2.jpg",
+        "/images/products/everywear-cap-black-den-3.jpg"
+      ],
+      "colors": [],
+      "badge": null
+    },
+    {
+      "slug": "timeless-socks-trang",
+      "name": "Timeless Socks - Tất (Vớ) Cao Cổ EQL - Freesize - Trắng",
+      "category": "Trắng",
+      "price": 120000,
+      "compareAt": null,
+      "rating": 4.8,
+      "reviews": 4,
+      "images": [
+        "/images/products/timeless-socks-trang-1.jpg",
+        "/images/products/timeless-socks-trang-2.jpg",
+        "/images/products/timeless-socks-trang-3.jpg"
+      ],
+      "colors": ["rgb(255, 255, 255)", "rgb(0, 0, 0)"],
+      "badge": null
+    },
+    {
+      "slug": "timeless-socks-tat-cao-co-eql-freesize-black",
+      "name": "Timeless Socks - Tất (Vớ) Cao Cổ EQL - Freesize - Đen",
+      "category": "Đen",
+      "price": 120000,
+      "compareAt": null,
+      "rating": 4.8,
+      "reviews": 4,
+      "images": [
+        "/images/products/timeless-socks-tat-cao-co-eql-freesize-black-1.jpg",
+        "/images/products/timeless-socks-tat-cao-co-eql-freesize-black-2.jpg"
+      ],
+      "colors": ["rgb(0, 0, 0)", "rgb(255, 255, 255)"],
+      "badge": null
+    },
+    {
+      "slug": "life-tumbler-black",
+      "name": "Life Tumbler - Đen",
+      "category": "Đen",
+      "price": 500000,
+      "compareAt": null,
+      "rating": 4.8,
+      "reviews": 4,
+      "images": [
+        "/images/products/life-tumbler-black-1.jpg",
+        "/images/products/life-tumbler-black-2.jpg",
+        "/images/products/life-tumbler-black-3.jpg"
+      ],
+      "colors": [],
+      "badge": null
+    },
+    {
+      "slug": "finesse-lime",
+      "name": "Finesse Dress - Vàng Chanh",
+      "category": "Vàng Chanh",
+      "price": 950000,
+      "compareAt": null,
+      "rating": 5,
+      "reviews": 3,
+      "images": [
+        "/images/products/finesse-lime-1.jpg",
+        "/images/products/finesse-lime-2.jpg",
+        "/images/products/finesse-lime-3.jpg"
+      ],
+      "colors": ["rgb(229, 229, 142)", "rgb(27, 42, 74)"],
+      "badge": null
+    },
+    {
+      "slug": "nestle-black",
+      "name": "Nestle - Đen",
+      "category": "Đen",
+      "price": 700000,
+      "compareAt": null,
+      "rating": 5,
+      "reviews": 3,
+      "images": [
+        "/images/products/nestle-black-1.jpg",
+        "/images/products/nestle-black-2.jpg",
+        "/images/products/nestle-black-3.jpg"
+      ],
+      "colors": ["rgb(0, 0, 0)", "rgb(255, 250, 250)"],
+      "badge": null
+    },
+    {
+      "slug": "biker-short-black",
+      "name": "Biker Short - Đen",
+      "category": "Đen",
+      "price": 550000,
+      "compareAt": null,
+      "rating": 5,
+      "reviews": 4,
+      "images": [
+        "/images/products/biker-short-black-1.jpg",
+        "/images/products/biker-short-black-2.jpg",
+        "/images/products/biker-short-black-3.jpg"
+      ],
+      "colors": [],
+      "badge": null
+    },
+    {
+      "slug": "ao-base-black",
+      "name": "Áo Base - Đen",
+      "category": "Đen",
+      "price": 550000,
+      "compareAt": null,
+      "rating": 5,
+      "reviews": 1,
+      "images": [
+        "/images/products/ao-base-black-1.jpg",
+        "/images/products/ao-base-black-2.jpg",
+        "/images/products/ao-base-black-3.jpg"
+      ],
+      "colors": [],
+      "badge": null
+    },
+    {
+      "slug": "celebre-capri-leggings-strawberry",
+      "name": "Celebré Capri Leggings - Đỏ Dâu",
+      "category": "Đỏ Dâu",
+      "price": 600000,
+      "compareAt": null,
+      "rating": 5,
+      "reviews": 3,
+      "images": [
+        "/images/products/celebre-capri-leggings-strawberry-1.jpg",
+        "/images/products/celebre-capri-leggings-strawberry-2.jpg",
+        "/images/products/celebre-capri-leggings-strawberry-3.jpg"
+      ],
+      "colors": ["rgb(252, 90, 141)", "rgb(0, 0, 0)"],
+      "badge": null
+    },
+    {
+      "slug": "celebre-cami-black",
+      "name": "Celebré Cami - Đen",
+      "category": "Đen",
+      "price": 500000,
+      "compareAt": null,
+      "rating": 4.3,
+      "reviews": 4,
+      "images": [
+        "/images/products/celebre-cami-black-1.jpg",
+        "/images/products/celebre-cami-black-2.jpg",
+        "/images/products/celebre-cami-black-3.jpg"
+      ],
+      "colors": ["rgb(0, 0, 0)", "rgb(255, 250, 250)"],
+      "badge": null
+    },
+    {
+      "slug": "celebre-tank-black",
+      "name": "Celebré Tank - Đen",
+      "category": "Đen",
+      "price": 500000,
+      "compareAt": null,
+      "rating": 4.6,
+      "reviews": 7,
+      "images": [
+        "/images/products/celebre-tank-black-1.webp",
+        "/images/products/celebre-tank-black-2.jpg",
+        "/images/products/celebre-tank-black-3.jpg"
+      ],
+      "colors": ["rgb(0, 0, 0)", "rgb(252, 90, 141)"],
+      "badge": null
+    },
+    {
+      "slug": "celebre-tank-strawberry",
+      "name": "Celebré Tank - Đỏ Dâu",
+      "category": "Đỏ Dâu",
+      "price": 500000,
+      "compareAt": null,
+      "rating": 4.6,
+      "reviews": 5,
+      "images": [
+        "/images/products/celebre-tank-strawberry-1.jpg",
+        "/images/products/celebre-tank-strawberry-2.jpg",
+        "/images/products/celebre-tank-strawberry-3.jpg"
+      ],
+      "colors": ["rgb(252, 90, 141)", "rgb(0, 0, 0)"],
+      "badge": null
+    },
+    {
+      "slug": "celebre-cami-snow",
+      "name": "Celebré Cami - Trắng",
+      "category": "Trắng",
+      "price": 500000,
+      "compareAt": null,
+      "rating": 5,
+      "reviews": 4,
+      "images": [
+        "/images/products/celebre-cami-snow-1.jpg",
+        "/images/products/celebre-cami-snow-2.jpg",
+        "/images/products/celebre-cami-snow-3.jpg"
+      ],
+      "colors": ["rgb(255, 250, 250)", "rgb(0, 0, 0)"],
+      "badge": null
+    },
+    {
+      "slug": "celebre-slit-skirt-black",
+      "name": "Celebré Slit Skirt - Đen",
+      "category": "Đen",
+      "price": 550000,
+      "compareAt": null,
+      "rating": 5,
+      "reviews": 2,
+      "images": [
+        "/images/products/celebre-slit-skirt-black-1.jpg",
+        "/images/products/celebre-slit-skirt-black-2.jpg",
+        "/images/products/celebre-slit-skirt-black-3.jpg"
+      ],
+      "colors": ["rgb(0, 0, 0)", "rgb(255, 250, 250)"],
+      "badge": null
+    },
+    {
+      "slug": "celebre-slit-skirt-snow",
+      "name": "Celebré Slit Skirt - Trắng",
+      "category": "Trắng",
+      "price": 550000,
+      "compareAt": null,
+      "rating": 5,
+      "reviews": 5,
+      "images": [
+        "/images/products/celebre-slit-skirt-snow-1.jpg",
+        "/images/products/celebre-slit-skirt-snow-2.jpg",
+        "/images/products/celebre-slit-skirt-snow-3.jpg"
+      ],
+      "colors": ["rgb(255, 250, 250)", "rgb(0, 0, 0)"],
+      "badge": null
+    },
+    {
+      "slug": "celebre-classic-skirt-strawberry",
+      "name": "Celebré Classic Skirt - Đỏ Dâu",
+      "category": "Đỏ Dâu",
+      "price": 550000,
+      "compareAt": null,
+      "rating": 5,
+      "reviews": 2,
+      "images": [
+        "/images/products/celebre-classic-skirt-strawberry-1.jpg",
+        "/images/products/celebre-classic-skirt-strawberry-2.jpg",
+        "/images/products/celebre-classic-skirt-strawberry-3.jpg"
+      ],
+      "colors": ["rgb(252, 90, 141)", "rgb(255, 250, 250)"],
+      "badge": null
+    },
+    {
+      "slug": "celebre-classic-skirt-snow",
+      "name": "Celebré Classic Skirt - Trắng",
+      "category": "Trắng",
+      "price": 550000,
+      "compareAt": null,
+      "rating": 5,
+      "reviews": 1,
+      "images": [
+        "/images/products/celebre-classic-skirt-snow-1.jpg",
+        "/images/products/celebre-classic-skirt-snow-2.jpg",
+        "/images/products/celebre-classic-skirt-snow-3.jpg"
+      ],
+      "colors": ["rgb(255, 250, 250)", "rgb(252, 90, 141)"],
+      "badge": null
+    },
+    {
+      "slug": "active-tote-bag",
+      "name": "Active Tote Bag",
+      "category": "Active Tote Bag",
+      "price": 800000,
+      "compareAt": null,
+      "rating": 4.8,
+      "reviews": 4,
+      "images": [
+        "/images/products/active-tote-bag-1.jpg",
+        "/images/products/active-tote-bag-2.jpg",
+        "/images/products/active-tote-bag-3.jpg"
+      ],
+      "colors": [],
+      "badge": null
+    },
+    {
+      "slug": "muse-ao-le-navy-xanh-navy",
+      "name": "Muse Áo Lẻ - Navy (Xanh Navy",
+      "category": "Navy (Xanh Navy",
+      "price": 500000,
+      "compareAt": null,
+      "rating": 4,
+      "reviews": 4,
+      "images": [
+        "/images/products/muse-ao-le-navy-xanh-navy-1.webp",
+        "/images/products/muse-ao-le-navy-xanh-navy-2.webp",
+        "/images/products/muse-ao-le-navy-xanh-navy-3.jpg"
+      ],
+      "colors": [],
+      "badge": null
+    },
+    {
+      "slug": "zest-vang-trang",
+      "name": "Zest Set - Vàng Trắng",
+      "category": "Vàng Trắng",
+      "price": 850000,
+      "compareAt": null,
+      "rating": 5,
+      "reviews": 3,
+      "images": [
+        "/images/products/zest-vang-trang-1.webp",
+        "/images/products/zest-vang-trang-2.webp",
+        "/images/products/zest-vang-trang-3.webp"
+      ],
+      "colors": [],
+      "badge": null
+    },
+    {
+      "slug": "cozy-jacket-coffee",
+      "name": "Cozy Jacket - Nâu",
+      "category": "Nâu",
+      "price": 700000,
+      "compareAt": null,
+      "rating": 4.8,
+      "reviews": 4,
+      "images": [
+        "/images/products/cozy-jacket-coffee-1.webp",
+        "/images/products/cozy-jacket-coffee-2.webp",
+        "/images/products/cozy-jacket-coffee-3.webp"
+      ],
+      "colors": ["rgb(111, 78, 55)", "rgb(0, 0, 0)"],
+      "badge": null
+    },
+    {
+      "slug": "cozy-pants-coffee",
+      "name": "Cozy Pants - Nâu",
+      "category": "Nâu",
+      "price": 700000,
+      "compareAt": null,
+      "rating": 4.3,
+      "reviews": 3,
+      "images": [
+        "/images/products/cozy-pants-coffee-1.webp",
+        "/images/products/cozy-pants-coffee-2.webp",
+        "/images/products/cozy-pants-coffee-3.webp"
+      ],
+      "colors": ["rgb(111, 78, 55)", "rgb(0, 0, 0)"],
+      "badge": null
+    },
+    {
+      "slug": "cozy-jacket-black",
+      "name": "Cozy Jacket - Đen",
+      "category": "Đen",
+      "price": 700000,
+      "compareAt": null,
+      "rating": 4.7,
+      "reviews": 3,
+      "images": [
+        "/images/products/cozy-jacket-black-1.webp",
+        "/images/products/cozy-jacket-black-2.webp",
+        "/images/products/cozy-jacket-black-3.jpg"
+      ],
+      "colors": ["rgb(0, 0, 0)", "rgb(111, 78, 55)"],
+      "badge": null
+    },
+    {
+      "slug": "cozy-pants-black",
+      "name": "Cozy Pants - Đen",
+      "category": "Đen",
+      "price": 700000,
+      "compareAt": null,
+      "rating": 4.7,
+      "reviews": 3,
+      "images": [
+        "/images/products/cozy-pants-black-1.webp",
+        "/images/products/cozy-pants-black-2.webp",
+        "/images/products/cozy-pants-black-3.webp"
+      ],
+      "colors": ["rgb(0, 0, 0)", "rgb(111, 78, 55)"],
+      "badge": null
+    }
+  ]
+}
