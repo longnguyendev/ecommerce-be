@@ -2,6 +2,7 @@ import { Field, ID, ObjectType } from '@nestjs/graphql';
 
 import { ProductStatus } from '@/common/graphql/prisma-enums';
 import { Category } from '@/modules/category/entities/category.entity';
+import { Collection } from '@/modules/collection/entities/collection.entity';
 import { ProductImage } from '@/modules/product-image/entities/product-image.entity';
 import { ProductVariant } from '@/modules/product-variant/entities/product-variant.entity';
 
@@ -36,6 +37,9 @@ export class Product {
 
   @Field(() => [ProductImage])
   images!: ProductImage[];
+
+  @Field(() => [Collection])
+  collections!: Collection[];
 
   @Field(() => Date)
   createdAt!: Date;

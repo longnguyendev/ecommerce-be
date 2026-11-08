@@ -107,7 +107,7 @@ export class CategoryService {
 
     const [childCount, productCount] = await Promise.all([
       this.prisma.category.count({ where: { parentId: id } }),
-      this.prisma.product.count({ where: { categoryId: id } }),
+      this.prisma.product.count({ where: { categoryId: id, deletedAt: null } }),
     ]);
 
     if (childCount > 0 || productCount > 0) {
@@ -117,6 +117,39 @@ export class CategoryService {
         HttpStatus.CONFLICT,
         { children: childCount, products: productCount },
       );
+    }
+
+    // Sản phẩm đã xoá mềm vẫn giữ khoá ngoại tới danh mục: chuyển chúng sang một danh mục
+    // khác để có thể xoá danh mục này.
+    const archived = await this.prisma.product.count({
+      where: { categoryId: id },
+    });
+
+    if (archived > 0) {
+      const target = await this.prisma.category.findFirst({
+        where: { id: { not: id } },
+        orderBy: { createdAt: 'asc' },
+        select: { id: true },
+      });
+
+      if (!target) {
+        throw new AppException(
+          'CONFLICT',
+          I18N_KEYS.ERRORS.SYSTEM.CONFLICT,
+          HttpStatus.CONFLICT,
+          { children: 0, products: archived },
+        );
+      }
+
+      await this.prisma.$transaction([
+        this.prisma.product.updateMany({
+          where: { categoryId: id },
+          data: { categoryId: target.id },
+        }),
+        this.prisma.category.delete({ where: { id } }),
+      ]);
+
+      return true;
     }
 
     await this.prisma.category.delete({ where: { id } });

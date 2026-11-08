@@ -11,6 +11,7 @@ import {
   ProductStatus,
   UserRole,
 } from '../src/generated/prisma/client';
+import { syncCollections } from './lib/collections';
 
 const SALT_ROUNDS = 12;
 
@@ -311,6 +312,9 @@ async function seed(): Promise<void> {
     }
 
     console.log(`Seeded ${created} products (with variant + images)`);
+
+    const col = await syncCollections(prisma);
+    console.log(`Seeded ${col.collections} collections (${col.links} links)`);
     console.log(`Total products in DB: ${await prisma.product.count()}`);
   } finally {
     await prisma.$disconnect();

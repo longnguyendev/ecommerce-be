@@ -17,6 +17,7 @@ import { GqlThrottlerGuard } from './guards/gql-throttler.guard';
 import { AttributeModule } from './modules/attribute/attribute.module';
 import { AuthModule } from './modules/auth/auth.module';
 import { CategoryModule } from './modules/category/category.module';
+import { CollectionModule } from './modules/collection/collection.module';
 import { CouponModule } from './modules/coupon/coupon.module';
 import { CustomerModule } from './modules/customer/customer.module';
 import { OrderModule } from './modules/order/order.module';
@@ -40,12 +41,13 @@ import { PrismaModule } from './prisma/prisma.module';
         redisConfig,
       ],
     }),
-    ThrottlerModule.forRoot([{ ttl: FIVE_MINUTES, limit: 50 }]),
+    ThrottlerModule.forRoot([{ ttl: FIVE_MINUTES, limit: 1000 }]),
     CoreModule,
     PrismaModule,
     AuthModule,
     UploadModule,
     CategoryModule,
+    CollectionModule,
     ProductModule,
     ProductVariantModule,
     ProductImageModule,

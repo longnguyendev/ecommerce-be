@@ -1,5 +1,6 @@
 import { Field, ID, InputType } from '@nestjs/graphql';
 import {
+  IsArray,
   IsEnum,
   IsOptional,
   IsString,
@@ -48,4 +49,11 @@ export class CreateProductInput {
   @IsOptional()
   @IsEnum(ProductStatus)
   status?: ProductStatus;
+
+  /** Danh sách collection gắn với sản phẩm (ghi đè toàn bộ khi có giá trị). */
+  @Field(() => [ID], { nullable: true })
+  @IsOptional()
+  @IsArray()
+  @IsUUID(undefined, { each: true })
+  collectionIds?: string[];
 }

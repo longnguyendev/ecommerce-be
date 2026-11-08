@@ -16,6 +16,11 @@ export class ProductFilterInput {
   @IsUUID()
   categoryId?: string;
 
+  @Field({ nullable: true })
+  @IsOptional()
+  @IsString()
+  collectionSlug?: string;
+
   @Field(() => ProductStatus, { nullable: true })
   @IsOptional()
   @IsEnum(ProductStatus)

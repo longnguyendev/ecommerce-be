@@ -1,9 +1,8 @@
 import { UseGuards } from '@nestjs/common';
 import { Args, ID, Mutation, Query, Resolver } from '@nestjs/graphql';
 
-import { Paginated, PaginationArgs } from '@/common/pagination';
-import { UserRole } from '@/generated/prisma/client';
-
+import { Paginated, PaginationArgs } from '../../common/pagination';
+import { UserRole } from '../../generated/prisma/client';
 import { Roles } from '../auth/decorators/roles.decorator';
 import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard';
 import { RolesGuard } from '../auth/guards/roles.guard';

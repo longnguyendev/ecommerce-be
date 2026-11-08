@@ -26,6 +26,28 @@ model Category {
   @@index([parentId])
 }
 
+/// Bộ sưu tập / nhóm hiển thị trên storefront (Sân, Studio, Tập, ...), gắn nhiều-nhiều với sản phẩm.
+model Collection {
+  id        String              @id @default(uuid())
+  name      String
+  slug      String              @unique
+  image     String?
+  sortOrder Int                 @default(0)
+  products  ProductCollection[]
+  createdAt DateTime            @default(now())
+  updatedAt DateTime            @updatedAt
+}
+
+model ProductCollection {
+  productId    String
+  product      Product    @relation(fields: [productId], references: [id], onDelete: Cascade)
+  collectionId String
+  collection   Collection @relation(fields: [collectionId], references: [id], onDelete: Cascade)
+
+  @@id([productId, collectionId])
+  @@index([collectionId])
+}
+
 enum ProductStatus {
   DRAFT
   ACTIVE
@@ -43,6 +65,7 @@ model Product {
   status      ProductStatus   @default(DRAFT)
   variants    ProductVariant[]
   images      ProductImage[]
+  collections ProductCollection[]
   createdAt   DateTime        @default(now())
   updatedAt   DateTime        @updatedAt
   deletedAt   DateTime?

@@ -23,6 +23,8 @@
     "db:deploy": "prisma migrate deploy",
     "db:seed": "tsx prisma/seed.ts",
     "db:merge-variants": "tsx prisma/merge-variants.ts",
+    "db:seed-collections": "tsx prisma/seed-collections.ts",
+    "db:remove-categories": "tsx prisma/remove-categories.ts",
     "db:studio": "prisma studio",
     "docker:dev:up": "docker compose -f docker-compose.dev.yml up -d",
     "docker:dev:down": "docker compose -f docker-compose.dev.yml down",

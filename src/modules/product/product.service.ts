@@ -17,6 +17,10 @@ const variantInclude = {
 
 const productInclude = {
   category: true,
+  collections: {
+    include: { collection: true },
+    orderBy: { collection: { sortOrder: 'asc' } },
+  },
   images: { orderBy: [{ sortOrder: 'asc' }, { createdAt: 'asc' }] },
   variants: {
     where: { deletedAt: null },
@@ -24,6 +28,13 @@ const productInclude = {
     include: variantInclude,
   },
 } satisfies Prisma.ProductInclude;
+
+type ProductRow = Prisma.ProductGetPayload<{ include: typeof productInclude }>;
+
+/** Prisma trả về bảng nối (ProductCollection); GraphQL chỉ cần danh sách Collection. */
+function toProduct(row: ProductRow) {
+  return { ...row, collections: row.collections.map((c) => c.collection) };
+}
 
 @Injectable()
 export class ProductService {
@@ -39,6 +50,13 @@ export class ProductService {
     const where: Prisma.ProductWhereInput = {
       ...(filter.includeDeleted ? {} : { deletedAt: null }),
       ...(filter.categoryId ? { categoryId: filter.categoryId } : {}),
+      ...(filter.collectionSlug
+        ? {
+            collections: {
+              some: { collection: { slug: filter.collectionSlug } },
+            },
+          }
+        : {}),
       ...(filter.status ? { status: filter.status } : {}),
       ...(filter.search
         ? {
@@ -62,7 +80,7 @@ export class ProductService {
     ]);
 
     const hasNextPage = rows.length > take;
-    const nodes = hasNextPage ? rows.slice(0, take) : rows;
+    const nodes = (hasNextPage ? rows.slice(0, take) : rows).map(toProduct);
 
     return {
       edges: nodes.map((node) => ({ cursor: node.id, node })),
@@ -82,7 +100,7 @@ export class ProductService {
       throw this.notFound();
     }
 
-    return product;
+    return toProduct(product);
   }
 
   async findBySlug(slug: string) {
@@ -95,13 +113,13 @@ export class ProductService {
       throw this.notFound();
     }
 
-    return product;
+    return toProduct(product);
   }
 
   async create(input: CreateProductInput) {
     await this.assertCategory(input.categoryId);
 
-    return this.prisma.product.create({
+    const created = await this.prisma.product.create({
       data: {
         categoryId: input.categoryId,
         name: input.name,
@@ -109,9 +127,20 @@ export class ProductService {
         description: input.description,
         thumbnail: input.thumbnail,
         status: input.status,
+        ...(input.collectionIds
+          ? {
+              collections: {
+                create: input.collectionIds.map((collectionId) => ({
+                  collectionId,
+                })),
+              },
+            }
+          : {}),
       },
       include: productInclude,
     });
+
+    return toProduct(created);
   }
 
   async update(input: UpdateProductInput) {
@@ -123,7 +152,7 @@ export class ProductService {
       await this.assertCategory(changes.categoryId);
     }
 
-    return this.prisma.product.update({
+    const updated = await this.prisma.product.update({
       where: { id },
       data: {
         categoryId: changes.categoryId,
@@ -132,9 +161,21 @@ export class ProductService {
         description: changes.description,
         thumbnail: changes.thumbnail,
         status: changes.status,
+        ...(changes.collectionIds
+          ? {
+              collections: {
+                deleteMany: {},
+                create: changes.collectionIds.map((collectionId) => ({
+                  collectionId,
+                })),
+              },
+            }
+          : {}),
       },
       include: productInclude,
     });
+
+    return toProduct(updated);
   }
 
   async remove(id: string): Promise<boolean> {
