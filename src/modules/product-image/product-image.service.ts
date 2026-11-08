@@ -24,7 +24,9 @@ export class ProductImageService {
 
     const where: Prisma.ProductImageWhereInput = {
       ...(filter.productId ? { productId: filter.productId } : {}),
-      ...(filter.variantId ? { variantId: filter.variantId } : {}),
+      ...(filter.attributeValueId
+        ? { attributeValueId: filter.attributeValueId }
+        : {}),
     };
 
     const [rows, totalCount] = await this.prisma.$transaction([
@@ -61,8 +63,8 @@ export class ProductImageService {
   async create(input: CreateProductImageInput) {
     await this.assertProduct(input.productId);
 
-    if (input.variantId) {
-      await this.assertVariant(input.variantId, input.productId);
+    if (input.attributeValueId) {
+      await this.assertColorValue(input.attributeValueId);
     }
 
     return this.prisma.$transaction(async (tx) => {
@@ -80,7 +82,7 @@ export class ProductImageService {
       return tx.productImage.create({
         data: {
           productId: input.productId,
-          variantId: input.variantId ?? null,
+          attributeValueId: input.attributeValueId ?? null,
           url: input.url,
           alt: input.alt,
           sortOrder: input.sortOrder ?? 0,
@@ -97,6 +99,9 @@ export class ProductImageService {
       where: { id: image.productId },
       select: { thumbnail: true },
     });
+    if (changes.attributeValueId) {
+      await this.assertColorValue(changes.attributeValueId);
+    }
     const nextUrl = changes.url ?? image.url;
     const nextIsPrimary = changes.isPrimary ?? image.isPrimary;
 
@@ -128,6 +133,7 @@ export class ProductImageService {
           alt: changes.alt,
           sortOrder: changes.sortOrder,
           isPrimary: changes.isPrimary,
+          attributeValueId: changes.attributeValueId,
         },
       });
     });
@@ -241,21 +247,18 @@ export class ProductImageService {
     }
   }
 
-  private async assertVariant(
-    variantId: string,
-    productId: string,
-  ): Promise<void> {
-    const variant = await this.prisma.productVariant.findUnique({
-      where: { id: variantId },
-      select: { id: true, productId: true, deletedAt: true },
+  private async assertColorValue(attributeValueId: string): Promise<void> {
+    const value = await this.prisma.attributeValue.findUnique({
+      where: { id: attributeValueId },
+      select: { id: true },
     });
 
-    if (!variant || variant.deletedAt || variant.productId !== productId) {
+    if (!value) {
       throw new AppException(
         'BAD_USER_INPUT',
         I18N_KEYS.ERRORS.SYSTEM.BAD_REQUEST,
         HttpStatus.BAD_REQUEST,
-        { field: 'variantId', entity: 'ProductVariant' },
+        { field: 'attributeValueId', entity: 'AttributeValue' },
       );
     }
   }

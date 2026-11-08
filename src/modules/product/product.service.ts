@@ -12,7 +12,6 @@ import { UpdateProductInput } from './dto/update-product.input';
 
 const variantInclude = {
   attributes: { include: { attribute: true, attributeValue: true } },
-  images: { orderBy: [{ isPrimary: 'desc' }, { sortOrder: 'asc' }] },
 } satisfies Prisma.ProductVariantInclude;
 
 const productInclude = {

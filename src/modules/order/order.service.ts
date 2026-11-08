@@ -139,8 +139,13 @@ export class OrderService {
           product: { deletedAt: null },
         },
         include: {
-          product: true,
-          images: { orderBy: [{ isPrimary: 'desc' }, { sortOrder: 'asc' }] },
+          product: {
+            include: {
+              images: {
+                orderBy: [{ isPrimary: 'desc' }, { sortOrder: 'asc' }],
+              },
+            },
+          },
           attributes: {
             include: { attribute: true, attributeValue: true },
           },
@@ -183,7 +188,7 @@ export class OrderService {
                   .join(' / ')
               : null,
           sku: variant.sku,
-          image: variant.images[0]?.url ?? variant.product.thumbnail,
+          image: this.variantImage(variant) ?? variant.product.thumbnail,
           quantity,
           unitPrice: variant.price,
           unitCost: variant.costPrice,
@@ -394,6 +399,29 @@ export class OrderService {
       'INTERNAL_SERVER_ERROR',
       I18N_KEYS.ERRORS.SYSTEM.INTERNAL_SERVER_ERROR,
       HttpStatus.INTERNAL_SERVER_ERROR,
+    );
+  }
+
+  /** Ảnh của biến thể = ảnh theo màu của biến thể; không có thì ảnh chung đầu tiên. */
+  private variantImage(variant: {
+    attributes: {
+      attribute: { name: string };
+      attributeValueId: string;
+    }[];
+    product: {
+      images: { url: string; attributeValueId: string | null }[];
+    };
+  }): string | null {
+    const colorValueId = variant.attributes.find(
+      (link) => link.attribute.name === 'Màu sắc',
+    )?.attributeValueId;
+    const images = variant.product.images;
+
+    return (
+      images.find((i) => colorValueId && i.attributeValueId === colorValueId)
+        ?.url ??
+      images.find((i) => !i.attributeValueId)?.url ??
+      null
     );
   }
 

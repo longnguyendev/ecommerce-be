@@ -18,7 +18,7 @@ export class CreateProductImageInput {
   @Field(() => ID, { nullable: true })
   @IsOptional()
   @IsUUID()
-  variantId?: string;
+  attributeValueId?: string;
 
   @Field()
   @IsString()

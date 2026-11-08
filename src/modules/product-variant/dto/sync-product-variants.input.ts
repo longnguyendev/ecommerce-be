@@ -8,7 +8,6 @@ import {
   IsOptional,
   IsString,
   IsUUID,
-  MaxLength,
   Min,
   MinLength,
   ValidateNested,
@@ -61,16 +60,6 @@ export class SyncVariantInput {
   @IsOptional()
   @IsBoolean()
   isActive?: boolean;
-
-  /**
-   * Ảnh đại diện của biến thể (URL). Bỏ qua = giữ nguyên;
-   * null / chuỗi rỗng = xoá ảnh biến thể.
-   */
-  @Field(() => String, { nullable: true })
-  @IsOptional()
-  @IsString()
-  @MaxLength(1000)
-  imageUrl?: string | null;
 
   /** Tổ hợp thuộc tính của biến thể. Rỗng = biến thể mặc định (sản phẩm không có biến thể). */
   @Field(() => [VariantOptionValueInput])

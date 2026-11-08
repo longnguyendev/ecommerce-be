@@ -11,5 +11,5 @@ export class ProductImageFilterInput {
   @Field(() => ID, { nullable: true })
   @IsOptional()
   @IsUUID()
-  variantId?: string;
+  attributeValueId?: string;
 }

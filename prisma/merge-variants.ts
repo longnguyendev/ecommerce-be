@@ -194,7 +194,7 @@ async function mergeGroup(
         where: { productId: member.product.id },
         data: {
           productId: primary.id,
-          variantId: result.firstVariantId,
+          attributeValueId: colorValueId,
           isPrimary: false,
         },
       });

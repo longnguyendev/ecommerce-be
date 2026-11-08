@@ -1,7 +1,5 @@
 import { Field, ID, Int, ObjectType } from '@nestjs/graphql';
 
-import { ProductImage } from '@/modules/product-image/entities/product-image.entity';
-
 import { VariantAttributeValue } from './variant-attribute-value.entity';
 
 @ObjectType()
@@ -26,9 +24,6 @@ export class ProductVariant {
 
   @Field(() => Int)
   stockQuantity!: number;
-
-  @Field(() => [ProductImage])
-  images!: ProductImage[];
 
   @Field()
   isActive!: boolean;

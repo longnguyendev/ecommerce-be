@@ -13,7 +13,6 @@ import { UpdateProductVariantInput } from './dto/update-product-variant.input';
 
 const variantInclude = {
   attributes: { include: { attribute: true, attributeValue: true } },
-  images: { orderBy: [{ isPrimary: 'desc' }, { sortOrder: 'asc' }] },
 } satisfies Prisma.ProductVariantInclude;
 
 interface AttributeLink {
@@ -258,15 +257,13 @@ export class ProductVariantService {
           isActive: data.isActive ?? true,
         };
         const found = existingByKey.get(item.key);
-        let variantId: string;
         if (found) {
           await tx.productVariant.update({
             where: { id: found.id },
             data: fields,
           });
-          variantId = found.id;
         } else {
-          const created = await tx.productVariant.create({
+          await tx.productVariant.create({
             data: {
               productId: input.productId,
               ...fields,
@@ -274,17 +271,8 @@ export class ProductVariantService {
               attributes:
                 item.links.length > 0 ? { create: item.links } : undefined,
             },
-            select: { id: true },
           });
-          variantId = created.id;
         }
-
-        await this.syncVariantImage(
-          tx,
-          input.productId,
-          variantId,
-          data.imageUrl,
-        );
       }
     });
 
@@ -293,42 +281,6 @@ export class ProductVariantService {
       orderBy: { createdAt: 'asc' },
       include: variantInclude,
     });
-  }
-
-  /** Ảnh đại diện biến thể = ảnh đầu tiên có variantId; không đụng tới ảnh đại diện sản phẩm. */
-  private async syncVariantImage(
-    tx: Prisma.TransactionClient,
-    productId: string,
-    variantId: string,
-    imageUrl: string | null | undefined,
-  ): Promise<void> {
-    if (imageUrl === undefined) return;
-
-    const current = await tx.productImage.findFirst({
-      where: { variantId },
-      orderBy: [
-        { isPrimary: 'desc' },
-        { sortOrder: 'asc' },
-        { createdAt: 'asc' },
-      ],
-      select: { id: true, url: true },
-    });
-    const url = imageUrl?.trim() ?? '';
-
-    if (!url) {
-      if (current) await tx.productImage.deleteMany({ where: { variantId } });
-      return;
-    }
-    if (!current) {
-      await tx.productImage.create({
-        data: { productId, variantId, url, sortOrder: 0, isPrimary: false },
-      });
-    } else if (current.url !== url) {
-      await tx.productImage.update({
-        where: { id: current.id },
-        data: { url },
-      });
-    }
   }
 
   async remove(id: string): Promise<boolean> {

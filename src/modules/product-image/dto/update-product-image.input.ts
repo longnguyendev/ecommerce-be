@@ -37,4 +37,10 @@ export class UpdateProductImageInput {
   @IsOptional()
   @IsBoolean()
   isPrimary?: boolean;
+
+  /** Màu của ảnh; null = ảnh chung, bỏ qua = giữ nguyên. */
+  @Field(() => ID, { nullable: true })
+  @IsOptional()
+  @IsUUID()
+  attributeValueId?: string | null;
 }

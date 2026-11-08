@@ -9,7 +9,7 @@ export class ProductImage {
   productId!: string;
 
   @Field(() => ID, { nullable: true })
-  variantId?: string | null;
+  attributeValueId?: string | null;
 
   @Field()
   url!: string;
