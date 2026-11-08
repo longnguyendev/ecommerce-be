@@ -29,6 +29,9 @@ COPY --from=build /app/dist ./dist
 COPY --from=build /app/prisma ./prisma
 COPY package.json yarn.lock ./
 
+# Thư mục ảnh upload: tạo sẵn và cấp quyền để named volume kế thừa đúng owner.
+RUN mkdir -p uploads && chown -R app:app uploads
+
 USER app
 EXPOSE 3000
 

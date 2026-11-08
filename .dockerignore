@@ -10,3 +10,4 @@ nestjs-bootstrap
 !.env.example
 data
 *.log
+uploads

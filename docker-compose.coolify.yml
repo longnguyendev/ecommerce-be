@@ -1,0 +1,92 @@
+# Coolify (Docker Compose build pack): app + PostgreSQL + Redis + one-shot migrate.
+#
+# Cách dùng trên Coolify:
+#   1. New Resource -> Docker Compose -> chọn repo ecommerce-be, Compose file: /docker-compose.coolify.yml
+#   2. Điền biến môi trường (xem mục `environment` bên dưới) trong tab Environment Variables.
+#   3. Gán domain cho service `app` (cổng 3000) trong tab Domains, hoặc dùng domain tự sinh.
+#
+# Không publish `ports`: Coolify (Traefik) tự proxy tới cổng 3000 của `app`.
+# Ảnh upload nằm ở volume `uploads_data` (/app/uploads) -> giữ lại qua các lần deploy.
+
+services:
+  postgres:
+    image: postgres:14-alpine
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?POSTGRES_PASSWORD is required}
+      POSTGRES_DB: ${POSTGRES_DB:-ecommerce}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}']
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+  redis:
+    image: redis:7-alpine
+    command: ['redis-server', '--appendonly', 'yes']
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ['CMD', 'redis-cli', 'ping']
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+  # One-shot: chạy prisma migrate deploy rồi thoát. Dùng stage `build` vì còn Prisma CLI.
+  migrate:
+    build:
+      context: .
+      target: build
+    command: ['yarn', 'db:deploy']
+    environment:
+      DATABASE_URL: postgresql://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB:-ecommerce}
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: 'no'
+    # Coolify: bỏ qua healthcheck/trạng thái exit của container chạy một lần.
+    exclude_from_hc: true
+
+  app:
+    build:
+      context: .
+      target: runtime
+    environment:
+      # Coolify tự sinh domain cho service này (có thể đổi trong tab Domains).
+      SERVICE_FQDN_APP_3000: ''
+      NODE_ENV: production
+      APP_PORT: 3000
+      # Origin của storefront/admin (CORS), vd: https://shop.example.com
+      FE_HOST: ${FE_HOST:?FE_HOST is required}
+      DATABASE_URL: postgresql://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB:-ecommerce}
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      JWT_TOKEN_SECRET: ${JWT_TOKEN_SECRET:?JWT_TOKEN_SECRET is required}
+      JWT_TOKEN_EXPIRATION_TIME: ${JWT_TOKEN_EXPIRATION_TIME:-15m}
+      JWT_REFRESH_TOKEN_SECRET: ${JWT_REFRESH_TOKEN_SECRET:?JWT_REFRESH_TOKEN_SECRET is required}
+      JWT_REFRESH_TOKEN_EXPIRATION_TIME: ${JWT_REFRESH_TOKEN_EXPIRATION_TIME:-7d}
+    volumes:
+      - uploads_data:/app/uploads
+    expose:
+      - '3000'
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+      redis:
+        condition: service_healthy
+    healthcheck:
+      test: ['CMD-SHELL', 'wget -qO- http://127.0.0.1:3000/health || exit 1']
+      interval: 30s
+      timeout: 5s
+      start_period: 20s
+      retries: 3
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+  redis_data:
+  uploads_data:
