@@ -22,7 +22,8 @@ FROM node:22-alpine AS runtime
 ENV NODE_ENV=production
 WORKDIR /app
 
-RUN addgroup -S app && adduser -S app -G app
+# uid/gid cố định để chown thư mục bind mount trên host (1001:1001).
+RUN addgroup -S -g 1001 app && adduser -S -u 1001 -G app app
 
 COPY --from=prod-deps /app/node_modules ./node_modules
 COPY --from=build /app/dist ./dist

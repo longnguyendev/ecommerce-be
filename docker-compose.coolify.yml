@@ -6,7 +6,9 @@
 #   3. Gán domain cho service `app` (cổng 3000) trong tab Domains, hoặc dùng domain tự sinh.
 #
 # Không publish `ports`: Coolify (Traefik) tự proxy tới cổng 3000 của `app`.
-# Ảnh upload nằm ở volume `uploads_data` (/app/uploads) -> giữ lại qua các lần deploy.
+# Ảnh upload: bind mount thư mục trên server (mặc định /data/ecommerce/uploads) vào /app/uploads.
+# Thư mục này phải tồn tại và thuộc uid 1001 (user `app` trong container):
+#   mkdir -p /data/ecommerce/uploads && chown -R 1001:1001 /data/ecommerce/uploads
 
 services:
   postgres:
@@ -70,7 +72,7 @@ services:
       JWT_REFRESH_TOKEN_SECRET: ${JWT_REFRESH_TOKEN_SECRET:?JWT_REFRESH_TOKEN_SECRET is required}
       JWT_REFRESH_TOKEN_EXPIRATION_TIME: ${JWT_REFRESH_TOKEN_EXPIRATION_TIME:-7d}
     volumes:
-      - uploads_data:/app/uploads
+      - ${UPLOADS_DIR:-/data/ecommerce/uploads}:/app/uploads
     expose:
       - '3000'
     depends_on:
@@ -89,4 +91,3 @@ services:
 volumes:
   postgres_data:
   redis_data:
-  uploads_data:
