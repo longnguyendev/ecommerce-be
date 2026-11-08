@@ -9,6 +9,10 @@
 # Ảnh upload: bind mount thư mục trên server (mặc định /data/ecommerce/uploads) vào /app/uploads.
 # Thư mục này phải tồn tại và thuộc uid 1001 (user `app` trong container):
 #   mkdir -p /data/ecommerce/uploads && chown -R 1001:1001 /data/ecommerce/uploads
+# Dữ liệu Postgres/Redis cũng bind mount ra host (đổi bằng POSTGRES_DATA_DIR / REDIS_DATA_DIR):
+#   mkdir -p /data/ecommerce/postgres /data/ecommerce/redis
+#   chown -R 70:70 /data/ecommerce/postgres      # user postgres trong postgres:alpine
+#   chown -R 999:1000 /data/ecommerce/redis      # user redis trong redis:alpine
 
 services:
   postgres:
@@ -18,7 +22,7 @@ services:
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?POSTGRES_PASSWORD is required}
       POSTGRES_DB: ${POSTGRES_DB:-ecommerce}
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - ${POSTGRES_DATA_DIR:-/data/ecommerce/postgres}:/var/lib/postgresql/data
     healthcheck:
       test: ['CMD-SHELL', 'pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}']
       interval: 10s
@@ -30,7 +34,7 @@ services:
     image: redis:7-alpine
     command: ['redis-server', '--appendonly', 'yes']
     volumes:
-      - redis_data:/data
+      - ${REDIS_DATA_DIR:-/data/ecommerce/redis}:/data
     healthcheck:
       test: ['CMD', 'redis-cli', 'ping']
       interval: 10s
@@ -43,8 +47,16 @@ services:
     build:
       context: .
       target: build
-    command: ['yarn', 'db:deploy']
+    # IMPORT_SNAPSHOT=true: sau khi migrate, nạp prisma/snapshot/catalog.json (chỉ thêm bản ghi
+    # chưa có). Bật cho lần deploy đầu, sau đó đặt lại false để không nạp lại mỗi lần deploy.
+    command:
+      - sh
+      - -c
+      - yarn db:deploy && if [ "$${IMPORT_SNAPSHOT:-false}" = "true" ]; then yarn db:import; fi
     environment:
+      IMPORT_SNAPSHOT: ${IMPORT_SNAPSHOT:-false}
+      SEED_ADMIN_EMAIL: ${SEED_ADMIN_EMAIL:-admin@example.com}
+      SEED_ADMIN_PASSWORD: ${SEED_ADMIN_PASSWORD:-ChangeMe123!}
       DATABASE_URL: postgresql://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB:-ecommerce}
     depends_on:
       postgres:
@@ -87,7 +99,3 @@ services:
       start_period: 20s
       retries: 3
     restart: unless-stopped
-
-volumes:
-  postgres_data:
-  redis_data:
