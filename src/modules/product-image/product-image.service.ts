@@ -1,4 +1,7 @@
-import { HttpStatus, Injectable } from '@nestjs/common';
+import { rm } from 'node:fs/promises';
+import { basename, join } from 'node:path';
+
+import { HttpStatus, Injectable, Logger } from '@nestjs/common';
 
 import { I18N_KEYS } from '@/common/constants';
 import { AppException } from '@/common/exceptions';
@@ -13,6 +16,8 @@ import { UpdateProductImageInput } from './dto/update-product-image.input';
 
 @Injectable()
 export class ProductImageService {
+  private readonly logger = new Logger(ProductImageService.name);
+
   constructor(private readonly prisma: PrismaService) {}
 
   async findAll(
@@ -157,7 +162,35 @@ export class ProductImageService {
       }
     });
 
+    await this.deleteFileIfUnused(image.url);
     return true;
+  }
+
+  /**
+   * Xoá file ảnh trên đĩa khi không còn nơi nào dùng URL đó (ảnh sản phẩm khác, ảnh đại diện,
+   * bộ sưu tập, ảnh trong đơn hàng đã mua). Lỗi xoá file không làm hỏng thao tác chính.
+   */
+  private async deleteFileIfUnused(url: string): Promise<void> {
+    const prefix = '/uploads/products/';
+    if (!url.startsWith(prefix)) return;
+    const name = url.slice(prefix.length);
+    if (!name || name !== basename(name)) return; // chống path traversal
+
+    const [images, thumbnails, orderItems, collections] = await Promise.all([
+      this.prisma.productImage.count({ where: { url } }),
+      this.prisma.product.count({ where: { thumbnail: url } }),
+      this.prisma.orderItem.count({ where: { image: url } }),
+      this.prisma.collection.count({ where: { image: url } }),
+    ]);
+    if (images + thumbnails + orderItems + collections > 0) return;
+
+    try {
+      await rm(join(process.cwd(), 'uploads', 'products', name), {
+        force: true,
+      });
+    } catch (error) {
+      this.logger.warn(`Không xoá được file ${name}: ${String(error)}`);
+    }
   }
 
   /**

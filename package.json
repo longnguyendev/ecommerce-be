@@ -23,6 +23,8 @@
     "db:deploy": "prisma migrate deploy",
     "db:seed": "tsx prisma/seed.ts",
     "db:merge-variants": "tsx prisma/merge-variants.ts",
+    "db:assign-shared": "tsx prisma/assign-shared-to-first-color.ts",
+    "db:clean-uploads": "tsx prisma/clean-uploads.ts",
     "db:export": "tsx prisma/export-snapshot.ts",
     "db:import": "tsx prisma/import-snapshot.ts",
     "db:seed-collections": "tsx prisma/seed-collections.ts",
