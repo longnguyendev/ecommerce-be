@@ -7,6 +7,8 @@ import {
   PaymentStatus,
   PaymentTxStatus,
   ProductStatus,
+  ReceiptStatus,
+  StockMovementType,
 } from '@/generated/prisma/enums';
 
 registerEnumType(ProductStatus, {
@@ -39,6 +41,16 @@ registerEnumType(PaymentTxStatus, {
   description: 'State of a single payment transaction',
 });
 
+registerEnumType(StockMovementType, {
+  name: 'StockMovementType',
+  description: 'Why the stock of a variant changed',
+});
+
+registerEnumType(ReceiptStatus, {
+  name: 'ReceiptStatus',
+  description: 'Lifecycle state of a purchase receipt',
+});
+
 export {
   DiscountType,
   OrderStatus,
@@ -46,4 +58,6 @@ export {
   PaymentStatus,
   PaymentTxStatus,
   ProductStatus,
+  ReceiptStatus,
+  StockMovementType,
 };

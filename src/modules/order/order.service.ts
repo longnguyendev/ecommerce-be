@@ -9,11 +9,13 @@ import {
   OrderStatus,
   PaymentMethod,
   PaymentStatus,
+  StockMovementType,
 } from '@/common/graphql/prisma-enums';
 import { PaginationArgs } from '@/common/pagination';
 import { Prisma } from '@/generated/prisma/client';
 import { PrismaService } from '@/prisma/prisma.service';
 
+import { InventoryService } from '../inventory/inventory.service';
 import { CreateOrderInput } from './dto/create-order.input';
 import { OrderFilterInput } from './dto/order-filter.input';
 import { UpdateOrderStatusInput } from './dto/update-order-status.input';
@@ -38,7 +40,10 @@ const TRANSITIONS: Record<OrderStatus, OrderStatus[]> = {
 
 @Injectable()
 export class OrderService {
-  constructor(private readonly prisma: PrismaService) {}
+  constructor(
+    private readonly prisma: PrismaService,
+    private readonly inventory: InventoryService,
+  ) {}
 
   async findAll(
     pagination: PaginationArgs = {},
@@ -282,21 +287,6 @@ export class OrderService {
       const shippingFee = input.shippingFee ?? 0;
       const finalAmount = totalAmount - discountAmount + shippingFee;
 
-      for (const item of items) {
-        const updated = await tx.productVariant.updateMany({
-          where: {
-            id: item.variantId,
-            stockQuantity: { gte: item.quantity },
-            deletedAt: null,
-          },
-          data: { stockQuantity: { decrement: item.quantity } },
-        });
-
-        if (updated.count === 0) {
-          throw this.insufficientStock(item.variantId);
-        }
-      }
-
       if (couponId) {
         await tx.coupon.update({
           where: { id: couponId },
@@ -306,7 +296,7 @@ export class OrderService {
 
       const orderCode = await this.nextOrderCode(tx);
 
-      return tx.order.create({
+      const order = await tx.order.create({
         data: {
           orderCode,
           customerId: input.customerId ?? null,
@@ -330,6 +320,18 @@ export class OrderService {
         },
         include: orderInclude,
       });
+
+      // Trừ kho sau khi có đơn để sổ kho gắn được orderId. Lỗi -> rollback cả đơn.
+      for (const item of items) {
+        await this.inventory.applyMovement(tx, {
+          variantId: item.variantId,
+          delta: -item.quantity,
+          type: StockMovementType.ORDER,
+          orderId: order.id,
+        });
+      }
+
+      return order;
     });
   }
 
@@ -353,9 +355,12 @@ export class OrderService {
       if (input.status === OrderStatus.CANCELLED) {
         for (const item of order.items) {
           if (item.variantId) {
-            await tx.productVariant.updateMany({
-              where: { id: item.variantId, deletedAt: null },
-              data: { stockQuantity: { increment: item.quantity } },
+            await this.inventory.applyMovement(tx, {
+              variantId: item.variantId,
+              delta: item.quantity,
+              type: StockMovementType.ORDER_CANCEL,
+              orderId: order.id,
+              skipIfMissing: true,
             });
           }
         }

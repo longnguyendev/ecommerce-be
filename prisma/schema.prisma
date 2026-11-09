@@ -120,6 +120,8 @@ model ProductVariant {
   isActive       Boolean  @default(true)
   attributes     VariantAttributeValue[]
   orderItems     OrderItem[]
+  stockMovements StockMovement[]
+  receiptItems   PurchaseReceiptItem[]
   createdAt      DateTime @default(now())
   updatedAt      DateTime @updatedAt
   deletedAt      DateTime?
@@ -241,6 +243,7 @@ model Order {
 
   items     OrderItem[]
   payments  Payment[]
+  stockMovements StockMovement[]
   createdAt DateTime    @default(now())
   updatedAt DateTime    @updatedAt
 

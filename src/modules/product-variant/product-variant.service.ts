@@ -2,10 +2,12 @@ import { HttpStatus, Injectable } from '@nestjs/common';
 
 import { I18N_KEYS } from '@/common/constants';
 import { AppException } from '@/common/exceptions';
+import { StockMovementType } from '@/common/graphql/prisma-enums';
 import { PaginationArgs } from '@/common/pagination';
 import { Prisma } from '@/generated/prisma/client';
 import { PrismaService } from '@/prisma/prisma.service';
 
+import { InventoryService } from '../inventory/inventory.service';
 import { CreateProductVariantInput } from './dto/create-product-variant.input';
 import { ProductVariantFilterInput } from './dto/product-variant-filter.input';
 import { SyncProductVariantsInput } from './dto/sync-product-variants.input';
@@ -29,7 +31,36 @@ function comboKey(links: AttributeLink[]): string {
 
 @Injectable()
 export class ProductVariantService {
-  constructor(private readonly prisma: PrismaService) {}
+  constructor(
+    private readonly prisma: PrismaService,
+    private readonly inventory: InventoryService,
+  ) {}
+
+  /**
+   * Đưa tồn về `target` thông qua sổ kho (không ghi đè trực tiếp). Biến thể mới
+   * (before = 0) được ghi là "Tồn đầu kỳ".
+   */
+  private async setStock(
+    tx: Prisma.TransactionClient,
+    variantId: string,
+    target: number | undefined,
+    reason: string,
+  ): Promise<void> {
+    if (target === undefined) return;
+    await tx.$queryRaw`SELECT id FROM "ProductVariant" WHERE id = ${variantId} FOR UPDATE`;
+    const current = await tx.productVariant.findUniqueOrThrow({
+      where: { id: variantId },
+      select: { stockQuantity: true },
+    });
+    const delta = target - current.stockQuantity;
+    if (delta === 0) return;
+    await this.inventory.applyMovement(tx, {
+      variantId,
+      delta,
+      type: StockMovementType.ADJUSTMENT,
+      reason,
+    });
+  }
 
   async findAll(
     pagination: PaginationArgs = {},
@@ -88,18 +119,25 @@ export class ProductVariantService {
       input.attributeValueIds ?? [],
     );
 
-    return this.prisma.productVariant.create({
-      data: {
-        productId: input.productId,
-        sku: input.sku,
-        price: input.price,
-        costPrice: input.costPrice ?? 0,
-        compareAtPrice: input.compareAtPrice,
-        stockQuantity: input.stockQuantity ?? 0,
-        isActive: input.isActive ?? true,
-        attributes: links.length > 0 ? { create: links } : undefined,
-      },
-      include: variantInclude,
+    return this.prisma.$transaction(async (tx) => {
+      const created = await tx.productVariant.create({
+        data: {
+          productId: input.productId,
+          sku: input.sku,
+          price: input.price,
+          costPrice: input.costPrice ?? 0,
+          compareAtPrice: input.compareAtPrice,
+          isActive: input.isActive ?? true,
+          attributes: links.length > 0 ? { create: links } : undefined,
+        },
+      });
+
+      await this.setStock(tx, created.id, input.stockQuantity, 'Tồn đầu kỳ');
+
+      return tx.productVariant.findUniqueOrThrow({
+        where: { id: created.id },
+        include: variantInclude,
+      });
     });
   }
 
@@ -126,10 +164,16 @@ export class ProductVariantService {
           price: changes.price,
           costPrice: changes.costPrice,
           compareAtPrice: changes.compareAtPrice,
-          stockQuantity: changes.stockQuantity,
           isActive: changes.isActive,
         },
       });
+
+      await this.setStock(
+        tx,
+        id,
+        changes.stockQuantity,
+        'Điều chỉnh từ form biến thể',
+      );
 
       if (links) {
         await tx.variantAttributeValue.deleteMany({ where: { variantId: id } });
@@ -253,7 +297,6 @@ export class ProductVariantService {
           price: data.price,
           costPrice: data.costPrice,
           compareAtPrice: data.compareAtPrice ?? null,
-          stockQuantity: data.stockQuantity ?? 0,
           isActive: data.isActive ?? true,
         };
         const found = existingByKey.get(item.key);
@@ -262,8 +305,14 @@ export class ProductVariantService {
             where: { id: found.id },
             data: fields,
           });
+          await this.setStock(
+            tx,
+            found.id,
+            data.stockQuantity,
+            'Điều chỉnh từ form sản phẩm',
+          );
         } else {
-          await tx.productVariant.create({
+          const created = await tx.productVariant.create({
             data: {
               productId: input.productId,
               ...fields,
@@ -272,6 +321,7 @@ export class ProductVariantService {
                 item.links.length > 0 ? { create: item.links } : undefined,
             },
           });
+          await this.setStock(tx, created.id, data.stockQuantity, 'Tồn đầu kỳ');
         }
       }
     });

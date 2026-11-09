@@ -20,6 +20,7 @@ import { CategoryModule } from './modules/category/category.module';
 import { CollectionModule } from './modules/collection/collection.module';
 import { CouponModule } from './modules/coupon/coupon.module';
 import { CustomerModule } from './modules/customer/customer.module';
+import { InventoryModule } from './modules/inventory/inventory.module';
 import { OrderModule } from './modules/order/order.module';
 import { PaymentModule } from './modules/payment/payment.module';
 import { ProductImageModule } from './modules/product-image/product-image.module';
@@ -54,6 +55,7 @@ import { PrismaModule } from './prisma/prisma.module';
     AttributeModule,
     CustomerModule,
     CouponModule,
+    InventoryModule,
     OrderModule,
     PaymentModule,
   ],
