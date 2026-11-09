@@ -1,0 +1,36 @@
+// ───────── Cart ─────────
+// Giỏ hàng lưu server, định danh bằng token ngẫu nhiên (khách vãng lai).
+// Không giữ kho: tồn kho chỉ bị trừ khi checkout tạo đơn.
+
+enum CartStatus {
+  ACTIVE
+  CONVERTED // đã checkout thành đơn
+}
+
+model Cart {
+  id         String     @id @default(uuid())
+  token      String     @unique
+  customerId String? // dành cho phase đăng nhập khách
+  couponCode String?
+  status     CartStatus @default(ACTIVE)
+  orderId    String?    @unique // idempotency: checkout lại trả về đơn này
+  order      Order?     @relation(fields: [orderId], references: [id], onDelete: SetNull)
+  items      CartItem[]
+  createdAt  DateTime   @default(now())
+  updatedAt  DateTime   @updatedAt
+
+  @@index([updatedAt])
+}
+
+model CartItem {
+  id        String         @id @default(uuid())
+  cartId    String
+  cart      Cart           @relation(fields: [cartId], references: [id], onDelete: Cascade)
+  variantId String
+  variant   ProductVariant @relation(fields: [variantId], references: [id], onDelete: Cascade)
+  quantity  Int
+  addedAt   DateTime       @default(now())
+
+  @@unique([cartId, variantId])
+  @@index([variantId])
+}

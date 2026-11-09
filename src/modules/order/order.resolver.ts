@@ -1,7 +1,12 @@
+import { UseGuards } from '@nestjs/common';
 import { Args, ID, Mutation, Query, Resolver } from '@nestjs/graphql';
 
 import { Paginated, PaginationArgs } from '@/common/pagination';
+import { UserRole } from '@/generated/prisma/client';
 
+import { Roles } from '../auth/decorators/roles.decorator';
+import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard';
+import { RolesGuard } from '../auth/guards/roles.guard';
 import { CreateOrderInput } from './dto/create-order.input';
 import { OrderFilterInput } from './dto/order-filter.input';
 import { UpdateOrderStatusInput } from './dto/update-order-status.input';
@@ -11,6 +16,8 @@ import { OrderService } from './order.service';
 const PaginatedOrder = Paginated(Order);
 
 @Resolver(() => Order)
+@UseGuards(JwtAuthGuard, RolesGuard)
+@Roles(UserRole.ADMIN)
 export class OrderResolver {
   constructor(private readonly orderService: OrderService) {}
 

@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { APP_GUARD, APP_INTERCEPTOR } from '@nestjs/core';
+import { ScheduleModule } from '@nestjs/schedule';
 import { ThrottlerModule } from '@nestjs/throttler';
 
 import databaseConfig from './common/config/database.config';
@@ -14,8 +15,10 @@ import { HealthResolver } from './common/health/health.resolver';
 import { PrismaErrorInterceptor } from './common/interceptors/prisma-error.interceptor';
 import { CoreModule } from './core/core.module';
 import { GqlThrottlerGuard } from './guards/gql-throttler.guard';
+import { AddressModule } from './modules/address/address.module';
 import { AttributeModule } from './modules/attribute/attribute.module';
 import { AuthModule } from './modules/auth/auth.module';
+import { CartModule } from './modules/cart/cart.module';
 import { CategoryModule } from './modules/category/category.module';
 import { CollectionModule } from './modules/collection/collection.module';
 import { CouponModule } from './modules/coupon/coupon.module';
@@ -42,6 +45,7 @@ import { PrismaModule } from './prisma/prisma.module';
         redisConfig,
       ],
     }),
+    ScheduleModule.forRoot(),
     ThrottlerModule.forRoot([{ ttl: FIVE_MINUTES, limit: 1000 }]),
     CoreModule,
     PrismaModule,
@@ -56,6 +60,8 @@ import { PrismaModule } from './prisma/prisma.module';
     CustomerModule,
     CouponModule,
     InventoryModule,
+    AddressModule,
+    CartModule,
     OrderModule,
     PaymentModule,
   ],

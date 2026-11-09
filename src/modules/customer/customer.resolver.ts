@@ -1,7 +1,12 @@
+import { UseGuards } from '@nestjs/common';
 import { Args, ID, Mutation, Query, Resolver } from '@nestjs/graphql';
 
 import { Paginated, PaginationArgs } from '@/common/pagination';
+import { UserRole } from '@/generated/prisma/client';
 
+import { Roles } from '../auth/decorators/roles.decorator';
+import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard';
+import { RolesGuard } from '../auth/guards/roles.guard';
 import { CustomerService } from './customer.service';
 import { CreateCustomerAddressInput } from './dto/create-customer-address.input';
 import { CreateCustomerInput } from './dto/create-customer.input';
@@ -14,6 +19,8 @@ import { Customer } from './entities/customer.entity';
 const PaginatedCustomer = Paginated(Customer);
 
 @Resolver(() => Customer)
+@UseGuards(JwtAuthGuard, RolesGuard)
+@Roles(UserRole.ADMIN)
 export class CustomerResolver {
   constructor(private readonly customerService: CustomerService) {}
 

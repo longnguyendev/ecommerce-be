@@ -36,6 +36,17 @@ export const I18N_KEYS = {
         INVALID_STATUS_TRANSITION:
           'errors.business.order.invalidStatusTransition',
         ORDER_NOT_FOUND: 'errors.business.order.notFound',
+        STATUS_CHANGED: 'errors.business.order.statusChanged',
+      },
+      ADDRESS: {
+        INVALID: 'errors.business.address.invalid',
+      },
+      CART: {
+        NOT_FOUND: 'errors.business.cart.notFound',
+        MAX_QUANTITY: 'errors.business.cart.maxQuantity',
+        VARIANT_UNAVAILABLE: 'errors.business.cart.variantUnavailable',
+        INSUFFICIENT_STOCK: 'errors.business.cart.insufficientStock',
+        NOT_CHECKOUTABLE: 'errors.business.cart.notCheckoutable',
       },
       INVENTORY: {
         RECEIPT_NOT_FOUND: 'errors.business.inventory.receiptNotFound',

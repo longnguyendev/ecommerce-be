@@ -122,6 +122,7 @@ model ProductVariant {
   orderItems     OrderItem[]
   stockMovements StockMovement[]
   receiptItems   PurchaseReceiptItem[]
+  cartItems      CartItem[]
   createdAt      DateTime @default(now())
   updatedAt      DateTime @updatedAt
   deletedAt      DateTime?
@@ -225,6 +226,8 @@ model Order {
   shippingWard     String
   shippingDistrict String?
   shippingProvince String
+  shippingProvinceCode String? // mã tỉnh (null với đơn cũ / đơn admin nhập tay)
+  shippingWardCode     String? // mã xã/phường
   note             String?
 
   // Tiền (VND). finalAmount = totalAmount - discountAmount + shippingFee
@@ -244,6 +247,8 @@ model Order {
   items     OrderItem[]
   payments  Payment[]
   stockMovements StockMovement[]
+  cart      Cart?
+  notifications AdminNotification[]
   createdAt DateTime    @default(now())
   updatedAt DateTime    @updatedAt
 

@@ -49,6 +49,12 @@ export class Order {
   shippingProvince!: string;
 
   @Field(() => String, { nullable: true })
+  shippingProvinceCode?: string | null;
+
+  @Field(() => String, { nullable: true })
+  shippingWardCode?: string | null;
+
+  @Field(() => String, { nullable: true })
   note?: string | null;
 
   @Field(() => Int)

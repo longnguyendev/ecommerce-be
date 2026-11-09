@@ -1,7 +1,12 @@
+import { UseGuards } from '@nestjs/common';
 import { Args, ID, Mutation, Query, Resolver } from '@nestjs/graphql';
 
 import { Paginated, PaginationArgs } from '@/common/pagination';
+import { UserRole } from '@/generated/prisma/client';
 
+import { Roles } from '../auth/decorators/roles.decorator';
+import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard';
+import { RolesGuard } from '../auth/guards/roles.guard';
 import { CreatePaymentInput } from './dto/create-payment.input';
 import { PaymentFilterInput } from './dto/payment-filter.input';
 import { UpdatePaymentStatusInput } from './dto/update-payment-status.input';
@@ -11,6 +16,8 @@ import { PaymentService } from './payment.service';
 const PaginatedPayment = Paginated(Payment);
 
 @Resolver(() => Payment)
+@UseGuards(JwtAuthGuard, RolesGuard)
+@Roles(UserRole.ADMIN)
 export class PaymentResolver {
   constructor(private readonly paymentService: PaymentService) {}
 

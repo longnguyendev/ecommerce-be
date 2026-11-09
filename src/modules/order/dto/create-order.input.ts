@@ -106,7 +106,10 @@ export class CreateOrderInput {
   @IsEnum(PaymentMethod)
   paymentMethod!: PaymentMethod;
 
-  @Field(() => Int, { nullable: true, defaultValue: 0 })
+  @Field(() => Int, {
+    nullable: true,
+    description: 'Bỏ trống để tính theo quy tắc phí ship chung',
+  })
   @IsOptional()
   @IsInt()
   @Min(0)

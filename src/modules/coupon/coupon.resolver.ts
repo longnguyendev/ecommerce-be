@@ -1,7 +1,12 @@
+import { UseGuards } from '@nestjs/common';
 import { Args, ID, Mutation, Query, Resolver } from '@nestjs/graphql';
 
 import { Paginated, PaginationArgs } from '@/common/pagination';
+import { UserRole } from '@/generated/prisma/client';
 
+import { Roles } from '../auth/decorators/roles.decorator';
+import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard';
+import { RolesGuard } from '../auth/guards/roles.guard';
 import { CouponService } from './coupon.service';
 import { CouponFilterInput } from './dto/coupon-filter.input';
 import { CreateCouponInput } from './dto/create-coupon.input';
@@ -11,6 +16,8 @@ import { Coupon } from './entities/coupon.entity';
 const PaginatedCoupon = Paginated(Coupon);
 
 @Resolver(() => Coupon)
+@UseGuards(JwtAuthGuard, RolesGuard)
+@Roles(UserRole.ADMIN)
 export class CouponResolver {
   constructor(private readonly couponService: CouponService) {}
 
