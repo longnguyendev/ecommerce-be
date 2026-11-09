@@ -1,0 +1,100 @@
+# Coolify (Docker Compose): app + PostgreSQL + Redis + one-shot migrate, dùng IMAGE ĐÃ BUILD sẵn
+# trên GHCR bởi GitHub Actions (.github/workflows/docker.yml) thay vì build trên server.
+# IMAGE_TAG: `latest` hoặc sha ngắn của commit / phiên bản (vd: sha-1a2b3c4, 1.0.0). Nên ghim tag
+# cụ thể để deploy lặp lại được. Registry private -> thêm Docker registry credentials trong Coolify.
+#
+# Cách dùng trên Coolify:
+#   1. New Resource -> Docker Compose -> chọn repo ecommerce-be, Compose file: /docker-compose.image.yml
+#   2. Điền biến môi trường (xem mục `environment` bên dưới) trong tab Environment Variables.
+#   3. Gán domain cho service `app` (cổng 3000) trong tab Domains, hoặc dùng domain tự sinh.
+#
+# Không publish `ports`: Coolify (Traefik) tự proxy tới cổng 3000 của `app`.
+# Ảnh upload: bind mount thư mục trên server (mặc định /data/ecommerce/uploads) vào /app/uploads.
+# Thư mục này phải tồn tại và thuộc uid 1001 (user `app` trong container):
+#   mkdir -p /data/ecommerce/uploads && chown -R 1001:1001 /data/ecommerce/uploads
+# Dữ liệu Postgres/Redis cũng bind mount ra host (đổi bằng POSTGRES_DATA_DIR / REDIS_DATA_DIR):
+#   mkdir -p /data/ecommerce/postgres /data/ecommerce/redis
+#   chown -R 70:70 /data/ecommerce/postgres      # user postgres trong postgres:alpine
+#   chown -R 999:1000 /data/ecommerce/redis      # user redis trong redis:alpine
+
+services:
+  postgres:
+    image: postgres:14-alpine
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?POSTGRES_PASSWORD is required}
+      POSTGRES_DB: ${POSTGRES_DB:-ecommerce}
+    volumes:
+      - ${POSTGRES_DATA_DIR:-/data/ecommerce/postgres}:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}']
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+  redis:
+    image: redis:7-alpine
+    command: ['redis-server', '--appendonly', 'yes']
+    volumes:
+      - ${REDIS_DATA_DIR:-/data/ecommerce/redis}:/data
+    healthcheck:
+      test: ['CMD', 'redis-cli', 'ping']
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+  # One-shot: chạy prisma migrate deploy rồi thoát. Dùng stage `build` vì còn Prisma CLI.
+  migrate:
+    image: ghcr.io/longnguyendev/ecommerce-be-migrate:${IMAGE_TAG:-latest}
+    # IMPORT_SNAPSHOT=true: sau khi migrate, nạp prisma/snapshot/catalog.json (chỉ thêm bản ghi
+    # chưa có). Bật cho lần deploy đầu, sau đó đặt lại false để không nạp lại mỗi lần deploy.
+    command:
+      - sh
+      - -c
+      - yarn db:deploy && if [ "$${IMPORT_SNAPSHOT:-false}" = "true" ]; then yarn db:import; fi
+    environment:
+      IMPORT_SNAPSHOT: ${IMPORT_SNAPSHOT:-false}
+      SEED_ADMIN_EMAIL: ${SEED_ADMIN_EMAIL:-admin@example.com}
+      SEED_ADMIN_PASSWORD: ${SEED_ADMIN_PASSWORD:-ChangeMe123!}
+      DATABASE_URL: postgresql://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB:-ecommerce}
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: 'no'
+    # Coolify: bỏ qua healthcheck/trạng thái exit của container chạy một lần.
+    exclude_from_hc: true
+
+  app:
+    image: ghcr.io/longnguyendev/ecommerce-be:${IMAGE_TAG:-latest}
+    environment:
+      # Coolify tự sinh domain cho service này (có thể đổi trong tab Domains).
+      SERVICE_FQDN_APP_3000: ''
+      NODE_ENV: production
+      APP_PORT: 3000
+      # Origin của storefront/admin (CORS), vd: https://shop.example.com
+      FE_HOST: ${FE_HOST:?FE_HOST is required}
+      DATABASE_URL: postgresql://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB:-ecommerce}
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      JWT_TOKEN_SECRET: ${JWT_TOKEN_SECRET:?JWT_TOKEN_SECRET is required}
+      JWT_TOKEN_EXPIRATION_TIME: ${JWT_TOKEN_EXPIRATION_TIME:-15m}
+      JWT_REFRESH_TOKEN_SECRET: ${JWT_REFRESH_TOKEN_SECRET:?JWT_REFRESH_TOKEN_SECRET is required}
+      JWT_REFRESH_TOKEN_EXPIRATION_TIME: ${JWT_REFRESH_TOKEN_EXPIRATION_TIME:-7d}
+    volumes:
+      - ${UPLOADS_DIR:-/data/ecommerce/uploads}:/app/uploads
+    expose:
+      - '3000'
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+      redis:
+        condition: service_healthy
+    healthcheck:
+      test: ['CMD-SHELL', 'wget -qO- http://127.0.0.1:3000/health || exit 1']
+      interval: 30s
+      timeout: 5s
+      start_period: 20s
+      retries: 3
+    restart: unless-stopped

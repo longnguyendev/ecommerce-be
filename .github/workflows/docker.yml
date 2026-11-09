@@ -36,7 +36,7 @@ jobs:
             type=sha,format=short
             type=semver,pattern={{version}}
 
-      # Chỉ build stage `runtime` (image chạy app). Service migrate trên Coolify tự build stage `build`.
+      # Image chạy app (stage `runtime`).
       - name: Build and push
         uses: docker/build-push-action@v6
         with:
@@ -45,5 +45,27 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      # Image chạy migrate/import dữ liệu (stage `build`, có Prisma CLI + tsx), tag giống image app.
+      - name: Migrate image metadata
+        id: meta_migrate
+        uses: docker/metadata-action@v5
+        with:
+          images: ghcr.io/${{ github.repository }}-migrate
+          tags: |
+            type=raw,value=latest,enable={{is_default_branch}}
+            type=sha,format=short
+            type=semver,pattern={{version}}
+
+      - name: Build and push migrate image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          target: build
+          push: ${{ github.event_name != 'pull_request' }}
+          tags: ${{ steps.meta_migrate.outputs.tags }}
+          labels: ${{ steps.meta_migrate.outputs.labels }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
