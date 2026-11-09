@@ -1,0 +1,20 @@
+// ───────── Đơn vị hành chính VN (2 cấp, hiệu lực 01/07/2025) ─────────
+// Dữ liệu tham chiếu, nạp bằng migration từ prisma/data/vn-admin-units.json.
+// Mã theo danh mục chính thức: tỉnh 2 chữ số, xã/phường 5 chữ số.
+
+model Province {
+  code  String @id
+  name  String // "Thành phố Hồ Chí Minh"
+  type  String // "tỉnh" | "thành phố trung ương"
+  wards Ward[]
+}
+
+model Ward {
+  code         String   @id
+  name         String // "Phường Bến Thành"
+  type         String // "phường" | "xã" | "đặc khu"
+  provinceCode String
+  province     Province @relation(fields: [provinceCode], references: [code])
+
+  @@index([provinceCode])
+}
