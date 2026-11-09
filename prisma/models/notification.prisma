@@ -1,0 +1,33 @@
+// ───────── Thông báo cho admin ─────────
+// Lưu server, trạng thái đã đọc theo từng admin. Tạo trong cùng transaction với
+// đơn hàng; realtime đẩy qua GraphQL subscription sau khi commit.
+
+enum AdminNotificationType {
+  ORDER_CREATED
+}
+
+model AdminNotification {
+  id        String                  @id @default(uuid())
+  type      AdminNotificationType
+  title     String // "Đơn mới DH20261110123456"
+  body      String // "Nguyễn Văn A · 3 SP · 1.050.000 ₫"
+  link      String? // "/admin/orders/<id>"
+  orderId   String?
+  order     Order?                  @relation(fields: [orderId], references: [id], onDelete: SetNull)
+  reads     AdminNotificationRead[]
+  createdAt DateTime                @default(now())
+
+  @@index([createdAt])
+  @@index([orderId])
+}
+
+model AdminNotificationRead {
+  notificationId String
+  notification   AdminNotification @relation(fields: [notificationId], references: [id], onDelete: Cascade)
+  userId         String
+  user           User              @relation(fields: [userId], references: [id], onDelete: Cascade)
+  readAt         DateTime          @default(now())
+
+  @@id([notificationId, userId])
+  @@index([userId])
+}
