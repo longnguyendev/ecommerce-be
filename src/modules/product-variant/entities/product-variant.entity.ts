@@ -16,7 +16,10 @@ export class ProductVariant {
   @Field(() => Int)
   price!: number;
 
-  @Field(() => Int)
+  /**
+   * Giá vốn — dữ liệu nội bộ. Không khai báo @Field ở đây: field được resolve
+   * trong ProductVariantResolver và trả null cho người không phải admin.
+   */
   costPrice!: number;
 
   @Field(() => Int, { nullable: true })

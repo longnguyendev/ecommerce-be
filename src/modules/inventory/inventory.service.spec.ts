@@ -1,4 +1,5 @@
 import type { ConfigService } from '@nestjs/config';
+import type { PubSubEngine } from 'graphql-subscriptions';
 
 import { I18N_KEYS } from '@/common/constants';
 import {
@@ -9,6 +10,8 @@ import {
 } from '@/common/graphql/prisma-enums';
 import { PrismaService } from '@/prisma/prisma.service';
 
+import { AddressService } from '../address/address.service';
+import { NotificationService } from '../notification/notification.service';
 import { OrderService } from '../order/order.service';
 import { InventoryService } from './inventory.service';
 
@@ -33,7 +36,14 @@ run('InventoryService (DB)', () => {
     } as unknown as ConfigService<never>);
     await prisma.onModuleInit();
     inventory = new InventoryService(prisma);
-    orders = new OrderService(prisma, inventory);
+    orders = new OrderService(
+      prisma,
+      inventory,
+      new AddressService(prisma),
+      new NotificationService(prisma, {
+        publish: async () => undefined,
+      } as unknown as PubSubEngine),
+    );
     const category = await prisma.category.create({
       data: { name: 'Test', slug: `test-${Date.now()}` },
     });
@@ -44,6 +54,7 @@ run('InventoryService (DB)', () => {
     await prisma.stockMovement.deleteMany();
     await prisma.purchaseReceipt.deleteMany();
     await prisma.orderItem.deleteMany();
+    await prisma.adminNotification.deleteMany();
     await prisma.order.deleteMany();
     await prisma.productVariant.deleteMany();
     await prisma.product.deleteMany();

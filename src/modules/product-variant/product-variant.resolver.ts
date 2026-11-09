@@ -1,12 +1,24 @@
 import { UseGuards } from '@nestjs/common';
-import { Args, ID, Mutation, Query, Resolver } from '@nestjs/graphql';
+import {
+  Args,
+  Context,
+  ID,
+  Int,
+  Mutation,
+  Parent,
+  Query,
+  ResolveField,
+  Resolver,
+} from '@nestjs/graphql';
 
 import { Paginated, PaginationArgs } from '@/common/pagination';
 import { UserRole } from '@/generated/prisma/client';
 
+import type { AuthenticatedRequest } from '../auth/auth.types';
 import { Roles } from '../auth/decorators/roles.decorator';
 import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard';
 import { RolesGuard } from '../auth/guards/roles.guard';
+import { ViewerService } from '../auth/viewer.service';
 import { CreateProductVariantInput } from './dto/create-product-variant.input';
 import { ProductVariantFilterInput } from './dto/product-variant-filter.input';
 import { SyncProductVariantsInput } from './dto/sync-product-variants.input';
@@ -18,7 +30,22 @@ const PaginatedProductVariant = Paginated(ProductVariant);
 
 @Resolver(() => ProductVariant)
 export class ProductVariantResolver {
-  constructor(private readonly productVariantService: ProductVariantService) {}
+  constructor(
+    private readonly productVariantService: ProductVariantService,
+    private readonly viewer: ViewerService,
+  ) {}
+
+  /** Giá vốn chỉ trả cho admin; khách / storefront nhận null. */
+  @ResolveField('costPrice', () => Int, {
+    nullable: true,
+    description: 'Giá vốn (VND) — chỉ admin, người khác nhận null',
+  })
+  async costPrice(
+    @Parent() variant: ProductVariant,
+    @Context('req') req: AuthenticatedRequest,
+  ): Promise<number | null> {
+    return (await this.viewer.isAdmin(req)) ? variant.costPrice : null;
+  }
 
   @Query(() => PaginatedProductVariant, { name: 'productVariants' })
   productVariants(
